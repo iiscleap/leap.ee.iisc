@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEAP LABORATORY</title>
+    <link href="../src/output.css" rel="stylesheet">    
+<style>
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .gallery {
+            column-count: 1;
+            column-gap: 1.5rem;
+        }
+        
+        .gallery img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 1.5rem;
+            break-inside: avoid;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1); /* shadow-md */
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.02);
+        }
+
+        @media (min-width: 640px) { 
+            .gallery {
+                column-count: 2; 
+            }
+        }
+        @media (min-width: 1024px) { 
+            .gallery {
+                column-count: 3; 
+            }
+        }
+
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none; 
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+
+<nav class="container mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-4 sticky top-0 z-50 w-full bg-white">
+    <div class="flex justify-between items-baseline">
+        <div class="sm:text-xl md:text-2xl lg:text-[22px] font-bold text-gray-400 leading-none"><a href="../">LEAP LABORATORY</a></div> 
+        <div class="space-x-6 hidden sm:flex">
+            <a href="../activities/" class="text-gray-600 hover:text-gray-900 transition duration-300 font-medium">Activities</a>
+            <a href="../publications/" class="text-gray-600 hover:text-gray-900 transition duration-300 font-medium">Publications</a>
+            <a href="../members/" class="text-gray-600 hover:text-gray-900 transition duration-300 font-medium">Members</a>
+            <a href="../highlights/" class="text-gray-600 hover:text-gray-900 transition duration-300 font-medium">Highlights</a>
+            <a href="../gallery/" class="text-gray-600 hover:text-gray-900 transition duration-300 font-medium">Gallery</a>
+            <a href="../#visit-us" class="text-gray-600 hover:text-gray-900 transition duration-300 font-medium">Contact</a>
+        </div>
+        <div id="menu-open-btn" class="space-y-1 lg:hidden cursor-pointer z-20 md:pl-96 sm:pl-32">
+            <div class="w-5 h-0.5 bg-black"></div>
+            <div class="w-5 h-0.5 bg-black"></div>
+            <div class="w-5 h-0.5 bg-black"></div>
+        </div>
+
+    </div>
+</nav>
+
+
+<div id="mobile-menu" class="hidden fixed inset-0 bg-white z-[100] p-4">
+    <div class="flex flex-col h-full">
+
+        <div class="flex justify-end pb-4">
+            <button id="menu-close-btn" class="text-gray-600 hover:text-gray-900 transition duration-300 focus:outline-none cursor-pointer" aria-label="Close menu">
+                <svg class="w-7 h-7" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+                    <path d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+
+
+        <nav class="flex flex-col flex-grow items-center justify-center">
+            <a href="../activities/" class="mobile-menu-link block w-full max-w-xs text-center text-xl font-medium text-gray-700 hover:text-gray-900 py-4 border-b border-gray-200 transition duration-300">Activities</a>
+            <a href="../publications/" class="mobile-menu-link block w-full max-w-xs text-center text-xl font-medium text-gray-700 hover:text-gray-900 py-4 border-b border-gray-200 transition duration-300">Publications</a>
+            <a href="../members/" class="mobile-menu-link block w-full max-w-xs text-center text-xl font-medium text-gray-700 hover:text-gray-900 py-4 border-b border-gray-200 transition duration-300">Members</a>
+            <a href="../highlights/" class="mobile-menu-link block w-full max-w-xs text-center text-xl font-medium text-gray-700 hover:text-gray-900 py-4 border-b border-gray-200 transition duration-300">Highlights</a>
+            <a href="../gallery/" class="mobile-menu-link block w-full max-w-xs text-center text-xl font-medium text-gray-700 hover:text-gray-900 py-4 border-b border-gray-200 transition duration-300">Gallery</a>
+            <a href="../#visit-us" class="mobile-menu-link block w-full max-w-xs text-center text-xl font-medium text-gray-700 hover:text-gray-900 py-4 border-b border-gray-200 transition duration-300">Contact</a>
+        </nav>
+    </div>
+</div>
+
+    <main class="max-w-6xl mx-auto px-6 sm:px-12 lg:px-24 py-8">
+
+        <div class="mb-8">
+            <h2 class="text-4xl font-semibold text-gray-800 mb-4 text-center pb-8 pt-8">Gallery</h2>
+            <div class="flex flex-wrap justify-center gap-x-6 gap-y-2 pb-20">
+
+                <a href="#labvideo" class="text-sm font-medium text-gray-700 hover:text-indigo-600 transition-colors duration-200">
+                    Lab Video
+                </a>
+                <a href="#team-dinner" class="text-sm font-medium text-gray-700 hover:text-indigo-600 transition-colors duration-200">
+                    Team Dinner
+                </a>
+                <a href="#interspeech2025" class="text-sm font-medium text-gray-700 hover:text-indigo-600 transition-colors duration-200">
+                    Interspeech 2025
+                </a>
+                <a href="#archive" class="text-sm font-medium text-gray-700 hover:text-indigo-600 transition-colors duration-200">
+                    Archive
+                </a>
+            </div>
+        </div>
+
+
+        <div id="labvideo" class="[scroll-margin-top:100px]">
+            <h2 class="text-3xl font-semibold text-gray-800 mb-6 text-center pb-15">
+                A sneak peek into the LEAP Lab work!
+            </h2>
+
+
+            <div class="flex justify-center">
+                <div class="w-full max-w-3xl aspect-video rounded-xl overflow-hidden shadow-lg">
+                    <iframe
+                    class="w-full h-full" 
+                    src="https://www.youtube.com/embed/0J-FjUiU_3k?si=KrWWEaqrkLf3BkjR" 
+                    title="LEAP Lab Video" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+
+        <div id="team-dinner" class="[scroll-margin-top:100px]">
+
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4 pt-10">Team Dinner</h2>
+            <div class="gallery">
+
+                <img src="../images/team_dinner_1.jpeg" alt="" loading="lazy">
+                <img src="../images/team_dinner_2.jpeg" alt="" loading="lazy">
+            </div>
+        </div>
+
+            <div id="interspeech2025" class="[scroll-margin-top:100px]">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4 pt-20">Interspeech 2025</h2>
+            <div class="gallery">
+
+                <img src="../images/interspeech2025_1.jpeg" alt="" loading="lazy">
+                <img src="../images/interspeech2025_2.jpeg" alt="" loading="lazy">
+                <img src="../images/interspeech2025_3.jpeg" alt="" loading="lazy">
+                <img src="../images/interspeech2025_4.jpeg" alt="" loading="lazy">
+                <img src="../images/interspeech2025_5.jpeg" alt="" loading="lazy">
+                <img src="../images/interspeech2025_6.jpeg" alt="" loading="lazy">
+            </div>
+            </div>
+
+            <div id="archive" class="[scroll-margin-top:100px] pt-20">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Archive</h2>
+            <div class="gallery">
+
+                <img src="../images/wissap1.jpeg" alt="" loading="lazy">
+                <img src="../images/wissap2.jpeg" alt="" loading="lazy">
+                <!-- LEAPers at Mandi, Himachal Pradesh for WiSSAP 2020. !!! -->
+
+                <img src="../images/brighton_icassp.JPG" alt="" loading="lazy">
+                <img src="../images/brighton_cliffs.JPG" alt="" loading="lazy">
+                <img src="../images/brighton_beach.JPG" alt="" loading="lazy">
+                <!-- <figcaption>LEAPers in Brighton for ICASSP 2019 !!!</figcaption> -->
+
+                <img src="../images/leap_openDay.jpg" alt="" loading="lazy">
+                <!-- <figcaption>LEAPers on Open Day 2019, IISc !!!</figcaption> -->
+
+                <img src="../images/leap_wissap19_3.jpg" alt="" loading="lazy">
+                <img src="../images/leap_wissap19_1.jpg" alt="" loading="lazy">
+                <img src="../images/leap_wissap19_4.jpg" alt="" loading="lazy">
+                <img src="../images/leap_wissap19_2.jpg" alt="" loading="lazy">
+                <!-- <figcaption>LEAPers in Trivandrum, Kerala for WiSSAP 2019. !!!</figcaption> -->
+
+                <img src="../images/akshara_marriage.jpg" alt="" loading="lazy">
+                <img src="../images/akshara_marriage3.jpg" alt="" loading="lazy">
+                <img src="../images/akshara_marriage2.jpg" alt="" loading="lazy">
+                <!-- <figcaption>LEAPers at Akshara's marriage in Pala, Kerala. Congratulations Akshara (y) !!!</figcaption> -->
+
+                <img src="../images/Leap_IS2018.jpg" alt="" loading="lazy">
+                <!-- <figcaption>4 generations of Ph.D. advisors and students in a pic: (1) Prof. Hiroya Fujisaki (2) Prof. Hynek Hermansky (3) Prof. Sriram Ganapathy and Prof. Nima Mesgarani, along with (4) LEAP lab students, at Interspeech 2018. LEAP in the 4th gen now !!</figcaption> -->
+
+                <img src="../images/interspeech_pu_sri.jpg" alt="" loading="lazy">
+                <!-- <figcaption>Sriram and Purvi at Interspeech 2017.</figcaption> -->
+
+                <img src="../images/allepey_beach.JPG" alt="" loading="lazy">
+                <img src="../images/allepey_boat.JPG" alt="" loading="lazy">
+                <img src="../images/allepey_boat.JPG" alt="" loading="lazy">
+                <!-- <figcaption> Allepey trip of LEAPers.</figcaption> -->
+
+                <img src="../images/treat_lighthouse.jpeg" alt="" loading="lazy">
+                <!-- <figcaption> [2019] A small reunion of LEAPers-Live and LEAPers-alumni.</figcaption> -->
+
+                <img src="../images/treat_shakesbierre2022.jpeg" alt="" loading="lazy">
+                <img src="../images/group_sriHome.jpeg" alt="" loading="lazy">
+                <img src="../images/treat_shakesbierre.jpg" alt="" loading="lazy">
+                <img src="../images/treat_absBBQ.jpg" alt="" loading="lazy">
+                <img src="../images/anmol_farewell_dinner.jpg" alt="" loading="lazy">
+                <img src="../images/leap_sriam_grahpravesh.jpg" alt="" loading="lazy">
+                <img src="../images/Leap_lab_hicc_fun.jpg" alt="" loading="lazy">
+                <img src="../images/pic_treat_AB.jpg" alt="" loading="lazy">
+                <img src="../images/pu_sh_ak_ABtreat.jpg" alt="" loading="lazy">
+                <img src="../images/london_curry_group.jpg" alt="" loading="lazy">
+                <img src="../images/lab_pic.jpg" alt="" loading="lazy">
+                <img src="../images/hatch_pic.jpg" alt="" loading="lazy">
+                <img src="../images/hatch_girls_pic.jpg" alt="" loading="lazy">
+                <img src="../images/lunch_pulimunchi_john.png" alt="" loading="lazy">
+                <img src="../images/yedu_bde.jpg" alt="" loading="lazy">
+                <img src="../images/lunch_chineseCorner.jpg" alt="" loading="lazy">
+                <img src="../images/treat_dhanushHarishRajath.jpg" alt="" loading="lazy">
+                <img src="../images/lab_photoshoot_mainBuilding.jpg" alt="" loading="lazy">
+                <img src="../images/purvi_compre_treat.jpg" alt="" loading="lazy">
+                <img src="../images/selected_truffles/IMG_20160803_170831_HDR.jpg" alt="" loading="lazy">
+                <img src="../images/selected_truffles/IMG_20170206_185100.jpg" alt="" loading="lazy">
+                <img src="../images/selected_truffles/IMG_20170206_185122.jpg" alt="" loading="lazy">
+
+                <img src="../images/savandurga1.jpeg" alt="" loading="lazy">
+                <img src="../images/savandurga3.jpeg" alt="" loading="lazy">
+                <!-- <figcaption> [2022] Early Morning Trek to Savandurga.</figcaption> -->
+
+                <img src="../images/periyar_trek2.jpg" alt="" loading="lazy">
+                <img src="../images/periyar_jeep.JPG" alt="" loading="lazy">
+                <img src="../images/periyar_trek.jpg" alt="" loading="lazy">
+                <!-- <figcaption> Periyar Tiger Reserve, Thekkady trip of LEAPers.</figcaption> -->
+
+                <img src="../images/periyar_jump.jpg" alt="" loading="lazy">
+                <img src="../images/DSC_4403.JPG" alt="" loading="lazy">
+                <img src="../images/DSC_4404.JPG" alt="" loading="lazy">
+                <img src="../images/skandagiri_dab_pose.JPG" alt="" loading="lazy">
+                <img src="../images/lab_trek_skandagiri.JPG" alt="" loading="lazy">
+                <img src="../images/trek_shillong2.jpg" alt="" loading="lazy">
+                <img src="../images/trek_shillong.jpg" alt="" loading="lazy">
+                <img src="../images/trek_cherapunji.jpg" alt="" loading="lazy">
+                <img src="../images/trek_pala.jpg" alt="" loading="lazy">
+                <img src="../images/pobiitora.jpg" alt="" loading="lazy">
+
+                <!-- <h2 id="summer-interns-2016">Summer Interns 2016</h2> -->
+                <img src="../navigation/gallery/assets/intern16_1.jpg" alt="" loading="lazy">
+                <img src="../navigation/gallery/assets/intern16_2.jpg" alt="" loading="lazy">
+                <img src="../navigation/gallery/assets/intern16_3.jpg" alt="" loading="lazy">
+
+
+
+
+
+            </div>
+
+
+
+        </div>
+
+    </main>
+
+    <footer class="bg-white mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 text-center">
+            <p class="text-gray-500 text-sm">&copy; 2025 LEAP Lab. All rights reserved.</p>
+        </div>
+    </footer>
+<script src="../js/app.js"></script>
+</body>
+</html>

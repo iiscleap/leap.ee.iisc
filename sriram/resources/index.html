@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sriram Ganapathy</title>
+    <link href="../../src/output.css" rel="stylesheet">
+</head>
+<body class="bg-white text-gray-800">
+
+<nav class="w-full bg-white pt-4 pb-4 sticky top-0 z-50">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-baseline">
+            <div class="sm:text-xl md:text-2xl lg:text-[22px] font-bold text-gray-400 leading-none"><a href="../">Sriram Ganapathy</a></div> 
+            
+            <div class="space-x-6 hidden sm:flex">
+                <a href="../" class="text-gray-600 hover:text-gray-900 transition duration-300 font-medium">About</a>
+                <a href="../background/" class="text-gray-600 hover:text-gray-900 transition duration-300 font-medium">Background</a>
+                <a href="../../publications/" class="text-gray-600 hover:text-gray-900 transition duration-300 font-medium">Publications</a>
+                <a href="../resources/" class="text-gray-600 hover:text-gray-900 transition duration-300 font-medium">Resources</a>
+                <a href="../../" class="text-gray-600 hover:text-gray-900 transition duration-300 font-medium">Laboratory</a>
+                <a href="../courses/" class="text-gray-600 hover:text-gray-900 transition duration-300 font-medium">Teaching</a>
+            </div>
+            
+            <div id="menu-open-btn" class="space-y-1 lg:hidden cursor-pointer z-20 md:pl-96 sm:pl-32">
+                <div class="w-5 h-0.5 bg-black"></div>
+                <div class="w-5 h-0.5 bg-black"></div>
+                <div class="w-5 h-0.5 bg-black"></div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+<div id="mobile-menu" class="hidden fixed inset-0 bg-white z-[100] p-4">
+    <div class="flex flex-col h-full">
+
+        <div class="flex justify-end pb-4">
+            <button id="menu-close-btn" class="text-gray-600 hover:text-gray-900 transition duration-300 focus:outline-none cursor-pointer" aria-label="Close menu">
+                <svg class="w-7 h-7" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+                    <path d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+
+
+        <nav class="flex flex-col flex-grow items-center justify-center">
+            <a href="../" class="mobile-menu-link block w-full max-w-xs text-center text-xl font-medium text-gray-700 hover:text-gray-900 py-4 border-b border-gray-200 transition duration-300">About</a>
+            <a href="../background/" class="mobile-menu-link block w-full max-w-xs text-center text-xl font-medium text-gray-700 hover:text-gray-900 py-4 border-b border-gray-200 transition duration-300">Background</a>
+            <a href="../../publications/" class="mobile-menu-link block w-full max-w-xs text-center text-xl font-medium text-gray-700 hover:text-gray-900 py-4 border-b border-gray-200 transition duration-300">Publications</a>
+            <a href="../resources/" class="mobile-menu-link block w-full max-w-xs text-center text-xl font-medium text-gray-700 hover:text-gray-900 py-4 border-b border-gray-200 transition duration-300">Resources</a>
+            <a href="../../" class="mobile-menu-link block w-full max-w-xs text-center text-xl font-medium text-gray-700 hover:text-gray-900 py-4 border-b border-gray-200 transition duration-300">Laboratory</a>
+            <a href="../courses/" class="mobile-menu-link block w-full max-w-xs text-center text-xl font-medium text-gray-700 hover:text-gray-900 py-4 border-b border-gray-200 transition duration-300">Teaching</a>
+        </nav>
+    </div>
+</div>
+
+<main class="bg-white min-h-screen text-black font-sans w-full">
+
+    <section class="w-full bg-white py-16 md:py-24">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-left mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-gray-900 mb-4">
+                    Resources
+                </h2>
+            </div>
+
+            <div class="mb-16">
+                <div class="mb-6 pb-2 border-b border-gray-200">
+                    <h3 class="text-xl font-bold text-gray-900">Resources Authored by S. Ganapathy</h3>
+                    <p>Follow the Code Repository on GitHub</p>
+                </div>
+                
+                <div class="space-y-4">
+
+                    <div class="group flex flex-col md:flex-row md:items-center justify-between p-4 rounded-lg hover:bg-gray-50 border border-transparent hover:border-gray-100 transition-all duration-200">
+                        <div class="md:w-3/4 pr-0 md:pr-8 mb-4 md:mb-0">
+                            <h4 class="text-lg font-semibold text-gray-900 group-hover:text-indigo-600 transition-colors">Signal analysis using AM-FM models</h4>
+                        </div>
+                        <div class="md:w-1/4 flex md:justify-end">
+                            <a href="https://github.com/iiscleap/SignalAnalysisUsingAm-FM" class="inline-flex items-center justify-center px-4 py-2 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 w-full md:w-auto transition-colors">
+                                Code
+                                <svg class="ml-2 -mr-1 w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="group flex flex-col md:flex-row md:items-center justify-between p-4 rounded-lg hover:bg-gray-50 border border-transparent hover:border-gray-100 transition-all duration-200">
+
+                        <div class="md:w-2/3 pr-0 md:pr-8 mb-4 md:mb-0">
+                            <h4 class="text-lg font-semibold text-gray-900 group-hover:text-indigo-600 transition-colors">Feature Extraction Toolkit Using FDLP</h4>
+                        </div>
+
+                        <div class="md:w-1/3 flex flex-col sm:flex-row gap-3 md:justify-end">
+
+                            <a href="https://github.com/iiscleap/FeatureExtractionUsingFDLP" class="inline-flex items-center justify-center px-4 py-2 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 w-full sm:w-auto transition-colors">
+                                Code
+                                <svg class="ml-2 -mr-1 w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+
+                            </a>
+
+                            <a href="https://github.com/iiscleap/FeatureExtractionUsingFDLP/tree/master/config" class="inline-flex items-center justify-center px-4 py-2 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 w-full sm:w-auto transition-colors">
+                                Config Files used in various publications
+                                <svg class="ml-2 -mr-1 w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+            <div class="mb-16">
+                <div class="mb-6 pb-2 border-b border-gray-200">
+                    <h3 class="text-xl font-bold text-gray-900">External Resources</h3>
+                </div>
+                
+                <div class="space-y-4">
+
+                    <div class="group flex flex-col md:flex-row md:items-center justify-between p-4 rounded-lg hover:bg-gray-50 border border-transparent hover:border-gray-100 transition-all duration-200">
+                        <div class="md:w-3/4 pr-0 md:pr-8 mb-4 md:mb-0">
+                            <h4 class="text-lg font-semibold text-gray-900 group-hover:text-indigo-600 transition-colors">PLP and MFCC feature implementations in matlab</h4>
+                        </div>
+                        <div class="md:w-1/4 flex md:justify-end">
+                            <a href="http://labrosa.ee.columbia.edu/matlab/rastamat/" class="inline-flex items-center justify-center px-4 py-2 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 w-full md:w-auto transition-colors">
+                                Code
+                                <svg class="ml-2 -mr-1 w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+
+
+                    <div class="group flex flex-col md:flex-row md:items-center justify-between p-4 rounded-lg hover:bg-gray-50 border border-transparent hover:border-gray-100 transition-all duration-200">
+                        <div class="md:w-3/4 pr-0 md:pr-8 mb-4 md:mb-0">
+                            <h4 class="text-lg font-semibold text-gray-900 group-hover:text-indigo-600 transition-colors">Quicknet software package for multi-layer perceptrons (MLPs)</h4>
+                        </div>
+                        <div class="md:w-1/4 flex md:justify-end">
+                            <a href="http://www.icsi.berkeley.edu/Speech/qn.html" class="inline-flex items-center justify-center px-4 py-2 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 w-full md:w-auto transition-colors">
+                                Code
+                                <svg class="ml-2 -mr-1 w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+
+
+
+                    <div class="group flex flex-col md:flex-row md:items-center justify-between p-4 rounded-lg hover:bg-gray-50 border border-transparent hover:border-gray-100 transition-all duration-200">
+                        <div class="md:w-3/4 pr-0 md:pr-8 mb-4 md:mb-0">
+                            <h4 class="text-lg font-semibold text-gray-900 group-hover:text-indigo-600 transition-colors">Hidden Markov Model Toolkit (HTK)</h4>
+                        </div>
+                        <div class="md:w-1/4 flex md:justify-end">
+                            <a href="https://htk.eng.cam.ac.uk/download.shtml" class="inline-flex items-center justify-center px-4 py-2 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 w-full md:w-auto transition-colors">
+                                Code
+                                <svg class="ml-2 -mr-1 w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="group flex flex-col md:flex-row md:items-center justify-between p-4 rounded-lg hover:bg-gray-50 border border-transparent hover:border-gray-100 transition-all duration-200">
+                        <div class="md:w-3/4 pr-0 md:pr-8 mb-4 md:mb-0">
+                            <h4 class="text-lg font-semibold text-gray-900 group-hover:text-indigo-600 transition-colors">PESQ ‘Perceptual Evaluation of Speech Quality’ software</h4>
+                        </div>
+                        <div class="md:w-1/4 flex md:justify-end">
+                            <a href="http://www.pesq.org/" class="inline-flex items-center justify-center px-4 py-2 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 w-full md:w-auto transition-colors">
+                                Code
+                                <svg class="ml-2 -mr-1 w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="group flex flex-col md:flex-row md:items-center justify-between p-4 rounded-lg hover:bg-gray-50 border border-transparent hover:border-gray-100 transition-all duration-200">
+                        <div class="md:w-3/4 pr-0 md:pr-8 mb-4 md:mb-0">
+                            <h4 class="text-lg font-semibold text-gray-900 group-hover:text-indigo-600 transition-colors">David Gelbart’s ICSI page on reverberations and noise compensation</h4>
+                        </div>
+                        <div class="md:w-1/4 flex md:justify-end">
+                            <a href="https://www.icsi.berkeley.edu/icsi/groups/Speech/papers/asru01-meansub-corr.html" class="inline-flex items-center justify-center px-4 py-2 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 w-full md:w-auto transition-colors">
+                                Code
+                                <svg class="ml-2 -mr-1 w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+
+
+
+                    <div class="group flex flex-col md:flex-row md:items-center justify-between p-4 rounded-lg hover:bg-gray-50 border border-transparent hover:border-gray-100 transition-all duration-200">
+                        <div class="md:w-3/4 pr-0 md:pr-8 mb-4 md:mb-0">
+                            <h4 class="text-lg font-semibold text-gray-900 group-hover:text-indigo-600 transition-colors">Marios Athineos page on modulation spectrum for audio coding</h4>
+                        </div>
+                        <div class="md:w-1/4 flex md:justify-end">
+                            <a href="https://www.ee.columbia.edu/~marios/modspec/modcodec.html" class="inline-flex items-center justify-center px-4 py-2 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 w-full md:w-auto transition-colors">
+                                Code
+                                <svg class="ml-2 -mr-1 w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+
+
+
+                    <div class="group flex flex-col md:flex-row md:items-center justify-between p-4 rounded-lg hover:bg-gray-50 border border-transparent hover:border-gray-100 transition-all duration-200">
+                        <div class="md:w-3/4 pr-0 md:pr-8 mb-4 md:mb-0">
+                            <h4 class="text-lg font-semibold text-gray-900 group-hover:text-indigo-600 transition-colors">Kaldi Speech Recognition Toolkit</h4>
+                        </div>
+                        <div class="md:w-1/4 flex md:justify-end">
+                            <a href="https://kaldi.sourceforge.io/about.html" class="inline-flex items-center justify-center px-4 py-2 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 w-full md:w-auto transition-colors">
+                                Code
+                                <svg class="ml-2 -mr-1 w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+
+
+
+                    <div class="group flex flex-col md:flex-row md:items-center justify-between p-4 rounded-lg hover:bg-gray-50 border border-transparent hover:border-gray-100 transition-all duration-200">
+                        <div class="md:w-3/4 pr-0 md:pr-8 mb-4 md:mb-0">
+                            <h4 class="text-lg font-semibold text-gray-900 group-hover:text-indigo-600 transition-colors">Alize Speaker and Language Recognition Toolbox</h4>
+                        </div>
+                        <div class="md:w-1/4 flex md:justify-end">
+                            <a href="http://www1.i2r.a-star.edu.sg/~alarcher/Softwares.html" class="inline-flex items-center justify-center px-4 py-2 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 w-full md:w-auto transition-colors">
+                                Code
+                                <svg class="ml-2 -mr-1 w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+
+
+
+                    <div class="group flex flex-col md:flex-row md:items-center justify-between p-4 rounded-lg hover:bg-gray-50 border border-transparent hover:border-gray-100 transition-all duration-200">
+                        <div class="md:w-3/4 pr-0 md:pr-8 mb-4 md:mb-0">
+                            <h4 class="text-lg font-semibold text-gray-900 group-hover:text-indigo-600 transition-colors">MSR Speaker Identity Toolkit</h4>
+                        </div>
+                        <div class="md:w-1/4 flex md:justify-end">
+                            <a href="https://www.microsoft.com/en-us/download/details.aspx?id=52284" class="inline-flex items-center justify-center px-4 py-2 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 w-full md:w-auto transition-colors">
+                                Code
+                                <svg class="ml-2 -mr-1 w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+
+
+
+                    <div class="group flex flex-col md:flex-row md:items-center justify-between p-4 rounded-lg hover:bg-gray-50 border border-transparent hover:border-gray-100 transition-all duration-200">
+                        <div class="md:w-3/4 pr-0 md:pr-8 mb-4 md:mb-0">
+                            <h4 class="text-lg font-semibold text-gray-900 group-hover:text-indigo-600 transition-colors">Impulse Response Functions for Artificial Room Reverberation From David Gelbart (ICSI)</h4>
+                        </div>
+                        <div class="md:w-1/4 flex md:justify-end">
+                            <a href="../research/Response_Functions.tgz" class="inline-flex items-center justify-center px-4 py-2 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 w-full md:w-auto transition-colors">
+                                Code
+                                <svg class="ml-2 -mr-1 w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="bg-white mt-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 text-center">
+        <p class="text-gray-500 text-sm">&copy; 2025 Sriram Ganapathy. All rights reserved.</p>
+    </div>
+</footer>
+<script src="../../js/app.js"></script>
+<script src="../../js/vendor/jquery-1.9.1.min.js"></script>
+<script src="../../js/particles.min.js"></script>
+<script src="../../js/particles.js"></script>
+
+</body>
+</html>

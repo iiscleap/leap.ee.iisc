@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sriram Ganapathy</title>
+    <link href="../../src/output.css" rel="stylesheet">
+    <style>
+        .course-card {
+            border-radius: 0.75rem;
+            background: #f9fafb;
+            border: 1px solid #f3f4f6;
+            border-top: 4px solid var(--accent);
+            display: flex;
+            flex-direction: column;
+            transition: box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+        .course-card:hover {
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+            border-top-color: var(--accent-dark);
+        }
+        .course-card--indigo { --accent: #818cf8; --accent-dark: #6366f1; --accent-bg: #e0e7ff; --accent-fg: #4f46e5; }
+        .course-card--purple { --accent: #c084fc; --accent-dark: #a855f7; --accent-bg: #f3e8ff; --accent-fg: #9333ea; }
+        .course-card--teal   { --accent: #2dd4bf; --accent-dark: #14b8a6; --accent-bg: #ccfbf1; --accent-fg: #0d9488; }
+        .course-card-icon {
+            flex-shrink: 0;
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 0.5rem;
+            background: var(--accent-bg);
+            color: var(--accent-fg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .course-card-code {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--accent-fg);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .course-card-rows {
+            padding: 0.5rem 2rem 1.5rem;
+        }
+        .course-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 0.875rem;
+            padding: 0.625rem 0.75rem;
+            margin: 0 -0.75rem;
+            border-radius: 0.5rem;
+            border-top: 1px solid #e5e7eb;
+            color: #374151;
+            text-decoration: none;
+            transition: background 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+        }
+        .course-row:last-child {
+            border-bottom: 1px solid #e5e7eb;
+        }
+        .course-row-arrow {
+            width: 1rem;
+            height: 1rem;
+            color: #9ca3af;
+            transition: transform 0.2s ease, color 0.2s ease;
+        }
+        .course-row:hover {
+            background: #ffffff;
+            border-top-color: transparent;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+            color: var(--accent-fg);
+        }
+        .course-row:hover .course-row-arrow {
+            color: var(--accent-dark);
+            transform: translateX(2px);
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+
+<nav class="w-full bg-white pt-4 pb-4 sticky top-0 z-50">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-baseline">
+            <div class="sm:text-xl md:text-2xl lg:text-[22px] font-bold text-gray-400 leading-none"><a href="../">Sriram Ganapathy</a></div>
+
+            <div class="space-x-6 hidden sm:flex">
+                <a href="../" class="text-gray-600 hover:text-gray-900 transition duration-300 font-medium">About</a>
+                <a href="../background/" class="text-gray-600 hover:text-gray-900 transition duration-300 font-medium">Background</a>
+                <a href="../../publications/" class="text-gray-600 hover:text-gray-900 transition duration-300 font-medium">Publications</a>
+                <a href="../resources/" class="text-gray-600 hover:text-gray-900 transition duration-300 font-medium">Resources</a>
+                <a href="../../" class="text-gray-600 hover:text-gray-900 transition duration-300 font-medium">Laboratory</a>
+                <a href="../courses/" class="text-gray-600 hover:text-gray-900 transition duration-300 font-medium">Teaching</a>
+            </div>
+
+            <div id="menu-open-btn" class="space-y-1 lg:hidden cursor-pointer z-20 md:pl-96 sm:pl-32">
+                <div class="w-5 h-0.5 bg-black"></div>
+                <div class="w-5 h-0.5 bg-black"></div>
+                <div class="w-5 h-0.5 bg-black"></div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+<div id="mobile-menu" class="hidden fixed inset-0 bg-white z-[100] p-4">
+    <div class="flex flex-col h-full">
+
+        <div class="flex justify-end pb-4">
+            <button id="menu-close-btn" class="text-gray-600 hover:text-gray-900 transition duration-300 focus:outline-none cursor-pointer" aria-label="Close menu">
+                <svg class="w-7 h-7" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+                    <path d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+
+
+        <nav class="flex flex-col flex-grow items-center justify-center">
+            <a href="../" class="mobile-menu-link block w-full max-w-xs text-center text-xl font-medium text-gray-700 hover:text-gray-900 py-4 border-b border-gray-200 transition duration-300">About</a>
+            <a href="../background/" class="mobile-menu-link block w-full max-w-xs text-center text-xl font-medium text-gray-700 hover:text-gray-900 py-4 border-b border-gray-200 transition duration-300">Background</a>
+            <a href="../../publications/" class="mobile-menu-link block w-full max-w-xs text-center text-xl font-medium text-gray-700 hover:text-gray-900 py-4 border-b border-gray-200 transition duration-300">Publications</a>
+            <a href="../resources/" class="mobile-menu-link block w-full max-w-xs text-center text-xl font-medium text-gray-700 hover:text-gray-900 py-4 border-b border-gray-200 transition duration-300">Resources</a>
+            <a href="../../" class="mobile-menu-link block w-full max-w-xs text-center text-xl font-medium text-gray-700 hover:text-gray-900 py-4 border-b border-gray-200 transition duration-300">Laboratory</a>
+            <a href="../courses/" class="mobile-menu-link block w-full max-w-xs text-center text-xl font-medium text-gray-700 hover:text-gray-900 py-4 border-b border-gray-200 transition duration-300">Teaching</a>
+        </nav>
+    </div>
+</div>
+
+<main class="bg-white min-h-screen text-black font-sans w-full">
+        <section class="w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+
+        <div class="text-left mb-16">
+            <h1 class="text-3xl md:text-4xl font-bold tracking-tight text-gray-900 mb-4">
+                Teaching
+            </h1>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-20">
+
+            <div class="course-card course-card--indigo">
+                <div class="p-8 pb-4">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="course-card-icon">
+                            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" /></svg>
+                        </div>
+                        <span class="course-card-code">E9:205</span>
+                    </div>
+                    <h2 class="text-xl font-bold text-gray-900 mb-2">Machine Learning for Signal Processing</h2>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Machine learning and deep learning algorithms for real world signals like text, speech and image.
+                    </p>
+                </div>
+                <div class="course-card-rows">
+                    <div>
+                        <a href="/sriram/teaching/MLSP25/" class="course-row">
+                            <span>Spring 2025</span>
+                            <svg class="course-row-arrow" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                        </a>
+                        <a href="/sriram/teaching/MLSP22/" class="course-row">
+                            <span>Spring 2022</span>
+                            <svg class="course-row-arrow" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                        </a>
+                        <a href="/sriram/teaching/MLSP21/" class="course-row">
+                            <span>Spring 2021</span>
+                            <svg class="course-row-arrow" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                        </a>
+                        <a href="/sriram/teaching/MLSP_19/" class="course-row">
+                            <span>Fall 2019</span>
+                            <svg class="course-row-arrow" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                        </a>
+                        <a href="/sriram/teaching/MLSP_18/" class="course-row">
+                            <span>Fall 2018</span>
+                            <svg class="course-row-arrow" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                        </a>
+                        <a href="/sriram/teaching/MLSP_17/" class="course-row">
+                            <span>Fall 2017</span>
+                            <svg class="course-row-arrow" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                        </a>
+                        <a href="/sriram/teaching/MLSP_16/" class="course-row">
+                            <span>Fall 2016</span>
+                            <svg class="course-row-arrow" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="course-card course-card--purple">
+                <div class="p-8 pb-4">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="course-card-icon">
+                            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0-11a3 3 0 003-3V5a3 3 0 10-6 0v3a3 3 0 003 3z" /></svg>
+                        </div>
+                        <span class="course-card-code">E9:261</span>
+                    </div>
+                    <h2 class="text-xl font-bold text-gray-900 mb-2">Speech Information Processing</h2>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Fundamentals of speech analysis, modeling and information extraction from speech signals.
+                    </p>
+                    <a href="https://www.youtube.com/playlist?list=PLMurGK2XhDl8" class="inline-flex items-center gap-1.5 mt-3 text-sm font-medium" style="color: var(--accent-fg);">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M21.582 7.186a2.994 2.994 0 00-2.107-2.117C17.71 4.5 12 4.5 12 4.5s-5.71 0-7.475.569A2.994 2.994 0 002.418 7.186 31.36 31.36 0 002 12a31.36 31.36 0 00.418 4.814 2.994 2.994 0 002.107 2.117C6.29 19.5 12 19.5 12 19.5s5.71 0 7.475-.569a2.994 2.994 0 002.107-2.117A31.36 31.36 0 0022 12a31.36 31.36 0 00-.418-4.814zM9.75 15.02V8.98L15.5 12l-5.75 3.02z"/></svg>
+                        YouTube Playlist
+                    </a>
+                </div>
+                <div class="course-card-rows">
+                    <div>
+                        <a href="http://www.ee.iisc.ac.in/people/faculty/prasantg/e9261_speech_jan2018.html" class="course-row">
+                            <span>Spring 2018</span>
+                            <svg class="course-row-arrow" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                        </a>
+                        <a href="/sriram/teaching/SIP2017/" class="course-row">
+                            <span>Spring 2017</span>
+                            <svg class="course-row-arrow" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                        </a>
+                        <a href="/sriram/teaching/SIP/" class="course-row">
+                            <span>Spring 2016</span>
+                            <svg class="course-row-arrow" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="course-card course-card--teal">
+                <div class="p-8 pb-4">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="course-card-icon">
+                            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+                        </div>
+                        <span class="course-card-code">E9:309</span>
+                    </div>
+                    <h2 class="text-xl font-bold text-gray-900 mb-2">Advanced Deep Learning</h2>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Advances in deep learning and applications in text, speech and image.
+                    </p>
+                    <a href="https://www.youtube.com/playlist?list=PLc07NE-llzw8" class="inline-flex items-center gap-1.5 mt-3 text-sm font-medium" style="color: var(--accent-fg);">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M21.582 7.186a2.994 2.994 0 00-2.107-2.117C17.71 4.5 12 4.5 12 4.5s-5.71 0-7.475.569A2.994 2.994 0 002.418 7.186 31.36 31.36 0 002 12a31.36 31.36 0 00.418 4.814 2.994 2.994 0 002.107 2.117C6.29 19.5 12 19.5 12 19.5s5.71 0 7.475-.569a2.994 2.994 0 002.107-2.117A31.36 31.36 0 0022 12a31.36 31.36 0 00-.418-4.814zM9.75 15.02V8.98L15.5 12l-5.75 3.02z"/></svg>
+                        YouTube Playlist
+                    </a>
+                </div>
+                <div class="course-card-rows">
+                    <div>
+                        <a href="/sriram/teaching/ADL2021/" class="course-row">
+                            <span>Fall 2021</span>
+                            <svg class="course-row-arrow" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                        </a>
+                        <a href="/sriram/teaching/ADL2020/" class="course-row">
+                            <span>Fall 2020</span>
+                            <svg class="course-row-arrow" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="border-t border-gray-100 pt-12">
+            <span class="text-xs tracking-widest uppercase text-gray-400 mb-2 block">Also Taught</span>
+            <h2 class="text-xl font-bold text-gray-900 mb-8">Other Courses</h2>
+
+        <div class="space-y-12">
+
+            <article class="flex flex-col md:flex-row md:items-start md:justify-between group">
+                <div class="md:w-3/4 pr-0 md:pr-12">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">
+                        <a href="/sriram/teaching/DL20/" class="hover:text-indigo-600 transition-colors duration-200 flex items-center group-hover:underline decoration-2 underline-offset-4 decoration-indigo-200 group-hover:decoration-indigo-600">
+                            Deep Learning - Theory and Practice (CCE Course, Spring 2020)
+                        </a>
+                    </h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Introduction to deep learning applications for industry offered in the center for continuing education (CCE), IISc.
+                    </p>
+                </div>
+                <div class="mt-4 md:mt-1 md:w-1/4 md:text-right">
+                    <span class="inline-flex items-center px-3 py-1 rounded-md bg-gray-50 text-sm font-medium text-gray-700 border border-gray-100">
+                        Jan 16, 2020
+                    </span>
+                </div>
+            </article>
+
+            <div class="w-full border-t border-gray-100"></div>
+
+            <article class="flex flex-col md:flex-row md:items-start md:justify-between group">
+                <div class="md:w-3/4 pr-0 md:pr-12">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">
+                        <a href="/sriram/teaching/DL19/" class="hover:text-indigo-600 transition-colors duration-200 flex items-center group-hover:underline decoration-2 underline-offset-4 decoration-indigo-200 group-hover:decoration-indigo-600">
+                            Deep Learning - Theory and Practice (CCE Course, Spring 2019)
+                        </a>
+                    </h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Introduction to deep learning applications for industry offered in the center for continuing education (CCE), IISc.
+                    </p>
+                </div>
+                <div class="mt-4 md:mt-1 md:w-1/4 md:text-right">
+                    <span class="inline-flex items-center px-3 py-1 rounded-md bg-gray-50 text-sm font-medium text-gray-700 border border-gray-100">
+                        Jan 10, 2019
+                    </span>
+                </div>
+            </article>
+
+            <div class="w-full border-t border-gray-100"></div>
+
+            <article class="flex flex-col md:flex-row md:items-start md:justify-between group">
+                <div class="md:w-3/4 pr-0 md:pr-12">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">
+                        <a href="/sriram/teaching/DL18/" class="hover:text-indigo-600 transition-colors duration-200 flex items-center group-hover:underline decoration-2 underline-offset-4 decoration-indigo-200 group-hover:decoration-indigo-600">
+                            Deep Learning - Theory and Practice (CCE Course)
+                        </a>
+                    </h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Introduction to deep learning applications for industry offered in the center for continuing education (CCE), IISc.
+                    </p>
+                </div>
+                <div class="mt-4 md:mt-1 md:w-1/4 md:text-right">
+                    <span class="inline-flex items-center px-3 py-1 rounded-md bg-gray-50 text-sm font-medium text-gray-700 border border-gray-100">
+                        Jan 18, 2018
+                    </span>
+                </div>
+            </article>
+
+        </div>
+        </div>
+    </section>
+</main>
+
+<footer class="bg-white mt-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 text-center">
+        <p class="text-gray-500 text-sm">&copy; 2025 Sriram Ganapathy. All rights reserved.</p>
+    </div>
+</footer>
+<script src="../../js/app.js"></script>
+<script src="../../js/vendor/jquery-1.9.1.min.js"></script>
+<script src="../../js/particles.min.js"></script>
+<script src="../../js/particles.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEAP LABORATORY</title>
+    <link href="./src/output.css" rel="stylesheet">
+</head>
+<body class="bg-white text-gray-800">
+
+<nav class="w-full bg-white pt-4 pb-4 sticky top-0 z-50">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-baseline">
+            <div class="sm:text-xl md:text-2xl lg:text-[22px] font-bold text-gray-400 leading-none"><a href="./">LEAP LABORATORY</a></div> 
+            
+            <div class="space-x-6 hidden sm:flex">
+                <a href="./activities/" class="text-gray-600 hover:text-gray-900 transition duration-300 font-medium">Activities</a>
+                <a href="./publications/" class="text-gray-600 hover:text-gray-900 transition duration-300 font-medium">Publications</a>
+                <a href="./members/" class="text-gray-600 hover:text-gray-900 transition duration-300 font-medium">Members</a>
+                <a href="./highlights/" class="text-gray-600 hover:text-gray-900 transition duration-300 font-medium">Highlights</a>
+                <a href="./gallery/" class="text-gray-600 hover:text-gray-900 transition duration-300 font-medium">Gallery</a>
+                <a href="#visit-us" class="text-gray-600 hover:text-gray-900 transition duration-300 font-medium">Contact</a>
+            </div>
+            
+            <div id="menu-open-btn" class="space-y-1 lg:hidden cursor-pointer z-20 md:pl-96 sm:pl-32">
+                <div class="w-5 h-0.5 bg-black"></div>
+                <div class="w-5 h-0.5 bg-black"></div>
+                <div class="w-5 h-0.5 bg-black"></div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+
+<div id="mobile-menu" class="hidden fixed inset-0 bg-white z-[100] p-4">
+    <div class="flex flex-col h-full">
+
+        <div class="flex justify-end pb-4">
+            <button id="menu-close-btn" class="text-gray-600 hover:text-gray-900 transition duration-300 focus:outline-none cursor-pointer" aria-label="Close menu">
+                <svg class="w-7 h-7" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+                    <path d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+
+
+        <nav class="flex flex-col flex-grow items-center justify-center">
+            <a href="./activities/" class="mobile-menu-link block w-full max-w-xs text-center text-xl font-medium text-gray-700 hover:text-gray-900 py-4 border-b border-gray-200 transition duration-300">Activities</a>
+            <a href="./publications/" class="mobile-menu-link block w-full max-w-xs text-center text-xl font-medium text-gray-700 hover:text-gray-900 py-4 border-b border-gray-200 transition duration-300">Publications</a>
+            <a href="./members/" class="mobile-menu-link block w-full max-w-xs text-center text-xl font-medium text-gray-700 hover:text-gray-900 py-4 border-b border-gray-200 transition duration-300">Members</a>
+            <a href="./highlights/" class="mobile-menu-link block w-full max-w-xs text-center text-xl font-medium text-gray-700 hover:text-gray-900 py-4 border-b border-gray-200 transition duration-300">Highlights</a>
+            <a href="./gallery/" class="mobile-menu-link block w-full max-w-xs text-center text-xl font-medium text-gray-700 hover:text-gray-900 py-4 border-b border-gray-200 transition duration-300">Gallery</a>
+            <a href="#visit-us" class="mobile-menu-link block w-full max-w-xs text-center text-xl font-medium text-gray-700 hover:text-gray-900 py-4 border-b border-gray-200 transition duration-300">Contact</a>
+        </nav>
+    </div>
+</div>
+
+  <main class="flex-grow">
+
+<section class="bg-white overflow-hidden mt-10">
+      <div class="relative mx-auto px-4 sm:px-6 lg:px-8 max-w-screen-2xl">
+
+        <div class="relative rounded-[1rem] flex flex-col justify-center items-center h-[75vh] overflow-hidden bg-slate-50 border border-slate-200">
+            
+            <div id="particles-js" class="absolute inset-0 w-full h-full z-0"></div>
+
+            <div class="relative z-10 flex flex-col items-center pointer-events-none">
+                
+                <div class="mb-7">
+                    <h1 class="text-2xl sm:text-5xl font-extrabold text-purple-800 text-center mb-4">
+                      Learning and Extraction of Acoustic Patterns
+                    </h1>
+                    
+                    <h2 class="text-xl sm:text-2xl font-medium text-gray-700 text-center mb-6">
+                      Department of Electrical Engineering, Indian Institute of Science
+                    </h2>
+                    
+                    <p class="text-lg sm:text-xl text-center text-purple-600 italic"
+                       style="font-family: 'Pacifico', cursive;">
+                      "Why walk when you can run, Why run when you can LEAP"
+                    </p>
+                </div>
+
+                <div class="flex flex-col sm:flex-row justify-center items-center gap-4 pointer-events-auto">
+                    <a href="./activities/">
+                      <button class="bg-purple-800 text-white font-semibold px-6 py-3 rounded-full shadow hover:bg-purple-900 transition cursor-pointer">
+                        Activities
+                      </button>
+                    </a>
+                    <a href="./members/">
+                      <button class="bg-white text-black font-semibold px-6 py-3 rounded-full shadow hover:bg-purple-100 transition cursor-pointer">
+                        Members
+                      </button>
+                    </a>
+                </div>
+            </div>
+          
+        </div>
+      </div>
+    </section>
+<main class="max-w-6xl mx-auto px-6 sm:px-12 lg:px-24 md:py-8">
+    <hr class="border-gray-100 mt-20">
+
+    <section class="w-full py-24 border-b border-gray-100">
+        <div class="flex flex-col md:flex-row gap-16 items-start">
+            <div class="md:w-1/3">
+                <h2 class="text-3xl font-light">Who We Are.</h2>
+            </div>
+            <div class="md:w-2/3">
+                <p class="text-xl md:text-2xl font-light text-gray-800 leading-relaxed mb-6">
+                    We are LEAPers, and conduct research and analysis on acoustic and multimodal signals through understanding and generation.
+                </p>
+                <div class="mt-4 flex flex-wrap gap-4 md:gap-6 text-sm font-medium">
+                    <a href="research-activity-summary-LEAP-Nov-24.pdf" class="inline-flex items-center text-purple-600 hover:text-purple-800 transition-colors">
+                        Present Research Activities
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 ml-1">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="flex flex-row justify-left items-center pt-5">
+                    <a href="https://scholar.google.com/citations?user=cgpzrtcAAAAJ&hl=en&oi=ao" class="">
+                        <img src="./icons/google-scholar.png" class="w-1/2" alt="">
+                    </a>
+                    <a href="https://www.linkedin.com/company/leap-laboratory-iisc/" class="">
+                        <img src="./icons/linkedin.png" class="w-1/2" alt="">
+                    </a>
+                    <a href="https://github.com/iiscleap" class="">
+                        <img src="./icons/github.png" class="w-1/2" alt="">
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="w-full md:pt-10 md:pb-10 pb-8 pt-8">
+        <span class="text-xs tracking-widest uppercase text-gray-400 mb-5 block">Recent Updates</span>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
+
+            <div class="border border-gray-200 p-6 bg-white hover:border-purple-200 transition-colors duration-300 shadow-sm hover:shadow-md">
+                <p class="text-xs text-purple-500 mb-2 uppercase tracking-wide">August 2026</p>
+                <h3 class="text-lg font-normal mb-1 tracking-tight">BiG-SURE Accepted to EMNLP 2026</h3>
+                <p class="text-sm text-gray-500">Congrats Debarpan and Malay on the Main track acceptance!</p>
+            </div>
+
+            <div class="border border-gray-200 p-6 bg-white hover:border-purple-200 transition-colors duration-300 shadow-sm hover:shadow-md">
+                <p class="text-xs text-purple-500 mb-2 uppercase tracking-wide">August 2026</p>
+                <h3 class="text-lg font-normal mb-1 tracking-tight">Soumya Defends PhD Thesis</h3>
+                <p class="text-sm text-gray-500">Congratulations to Soumya on successfully defending his thesis!</p>
+            </div>
+
+            <div class="border border-gray-200 p-6 bg-white hover:border-purple-200 transition-colors duration-300 shadow-sm hover:shadow-md">
+                <p class="text-xs text-purple-500 mb-2 uppercase tracking-wide">August 2026</p>
+                <h3 class="text-lg font-normal mb-1 tracking-tight">Paper Accepted in IEEE T-HMS</h3>
+                <p class="text-sm text-gray-500">Congrats Samrat and Akshara on the journal acceptance!</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="w-full md:pt-10 pt-5" id="visit-us">
+        <div class="border-t border-gray-100 pt-24">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div class="md:col-span-1">
+                    <span class="text-xs tracking-widest uppercase text-gray-400 mb-4 block">Location</span>
+                    <h2 class="text-3xl font-light mb-6">Visit Us.</h2>
+                    <p class="text-base text-gray-600 mb-4">
+                        Dept. of Electrical Engineering <br>
+                        Indian Institute of Science <br>
+                        Room C328 and A207 <br>
+                        +91 80 2293 2362 <br>
+                    </p>
+                </div>
+                
+                <div class="md:col-span-2 h-80 w-full bg-gray-100 rounded-2xl overflow-hidden shadow-sm border border-gray-200">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d582.8283347760361!2d77.5704537322121!3d13.015014946305927!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae17d24e436373%3A0x82e461238095adbd!2sDepartment%20Of%20Electrical%20Engineering!5e0!3m2!1sen!2sin!4v1763491768625!5m2!1sen!2sin"
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+        <section class="w-full pt-10">
+        <div class="border-t border-gray-100 pt-24">
+            <h1 class="text-center text-2xl font-semibold pb-10">Note for Undergraduate Intern Applicants</h1>
+            <p class="border-gray-100">There are no short-term positions (internships less than 4 months) available as the time is too short for research. Apologies for not being able to individually respond to the numerous student emails enquiring about this. If you have an option to conduct your final year project in your seventh semester (duration of 4-6 months) and have a good profile, please contact the Dr. Sriram Ganapathy by email.</p>
+        </div>
+    </section>
+
+</main>
+
+<footer class="bg-white mt-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 text-center">
+        <p class="text-gray-500 text-sm">&copy; 2025 LEAP Lab. All rights reserved.</p>
+    </div>
+</footer>
+<script src="./js/app.js"></script>
+<script src="./js/vendor/jquery-1.9.1.min.js"></script>
+<script src="./js/particles.min.js"></script>
+<script src="./js/particles_new.js"></script>
+
+</body>
+</html>

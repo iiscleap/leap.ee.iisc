@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sriram Ganapathy</title>
+    <link href="../../../src/output.css" rel="stylesheet">
+</head>
+<body class="bg-white text-gray-800">
+
+<nav class="w-full bg-white pt-4 pb-4 sticky top-0 z-50">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-baseline">
+            <div class="sm:text-xl md:text-2xl lg:text-[22px] font-bold text-gray-400 leading-none"><a href="../../../">Sriram Ganapathy</a></div>
+
+            <div class="space-x-6 hidden sm:flex">
+                <a href="../../" class="text-gray-600 hover:text-gray-900 transition duration-300 font-medium">About</a>
+                <a href="../../background/" class="text-gray-600 hover:text-gray-900 transition duration-300 font-medium">Background</a>
+                <a href="../../publications/" class="text-gray-600 hover:text-gray-900 transition duration-300 font-medium">Publications</a>
+                <a href="../../resources/" class="text-gray-600 hover:text-gray-900 transition duration-300 font-medium">Resources</a>
+                <a href="../../" class="text-gray-600 hover:text-gray-900 transition duration-300 font-medium">Laboratory</a>
+                <a href="../../courses/" class="text-gray-600 hover:text-gray-900 transition duration-300 font-medium">Teaching</a>
+            </div>
+
+            <div id="menu-open-btn" class="space-y-1 lg:hidden cursor-pointer z-20 md:pl-96 sm:pl-32">
+                <div class="w-5 h-0.5 bg-black"></div>
+                <div class="w-5 h-0.5 bg-black"></div>
+                <div class="w-5 h-0.5 bg-black"></div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+<div id="mobile-menu" class="hidden fixed inset-0 bg-white z-[100] p-4">
+    <div class="flex flex-col h-full">
+
+        <div class="flex justify-end pb-4">
+            <button id="menu-close-btn" class="text-gray-600 hover:text-gray-900 transition duration-300 focus:outline-none cursor-pointer" aria-label="Close menu">
+                <svg class="w-7 h-7" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+                    <path d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+
+
+        <nav class="flex flex-col flex-grow items-center justify-center">
+            <a href="../../" class="mobile-menu-link block w-full max-w-xs text-center text-xl font-medium text-gray-700 hover:text-gray-900 py-4 border-b border-gray-200 transition duration-300">About</a>
+            <a href="../../background/" class="mobile-menu-link block w-full max-w-xs text-center text-xl font-medium text-gray-700 hover:text-gray-900 py-4 border-b border-gray-200 transition duration-300">Background</a>
+            <a href="../../publications/" class="mobile-menu-link block w-full max-w-xs text-center text-xl font-medium text-gray-700 hover:text-gray-900 py-4 border-b border-gray-200 transition duration-300">Publications</a>
+            <a href="../../resources/" class="mobile-menu-link block w-full max-w-xs text-center text-xl font-medium text-gray-700 hover:text-gray-900 py-4 border-b border-gray-200 transition duration-300">Resources</a>
+            <a href="../../" class="mobile-menu-link block w-full max-w-xs text-center text-xl font-medium text-gray-700 hover:text-gray-900 py-4 border-b border-gray-200 transition duration-300">Laboratory</a>
+            <a href="../../courses/" class="mobile-menu-link block w-full max-w-xs text-center text-xl font-medium text-gray-700 hover:text-gray-900 py-4 border-b border-gray-200 transition duration-300">Teaching</a>
+        </nav>
+    </div>
+</div>
+
+<main class="bg-white min-h-screen text-black font-sans w-full">
+        <main class="w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+
+
+        <div class="text-center mb-16">
+            <h1 class="text-3xl md:text-5xl font-bold tracking-tight text-gray-900 mb-6">
+                Machine Learning for Signal Processing
+            </h1>
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
+                E9 205 • Fall 2018
+            </p>
+
+
+            <div class="mt-10 flex flex-wrap justify-center gap-x-8 gap-y-3 text-sm font-medium text-gray-600">
+                <a href="#announcements" class="hover:text-indigo-600 transition-colors border-b-2 border-transparent hover:border-indigo-600 pb-0.5">Announcements</a>
+                <a href="#syllabus" class="hover:text-indigo-600 transition-colors border-b-2 border-transparent hover:border-indigo-600 pb-0.5">Syllabus</a>
+                <a href="#grading" class="hover:text-indigo-600 transition-colors border-b-2 border-transparent hover:border-indigo-600 pb-0.5">Grading</a>
+                <a href="#textbooks" class="hover:text-indigo-600 transition-colors border-b-2 border-transparent hover:border-indigo-600 pb-0.5">Textbooks</a>
+                <a href="#slides" class="hover:text-indigo-600 transition-colors border-b-2 border-transparent hover:border-indigo-600 pb-0.5">Slides</a>
+
+            </div>
+        </div>
+
+        <section id="announcements" class="mb-20 scroll-mt-24">
+            <div class="flex items-center mb-8 pb-2 border-b border-gray-200">
+                <svg class="w-6 h-6 text-red-500 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z" />
+                </svg>
+                <h2 class="text-2xl font-bold text-gray-900">Announcements</h2>
+            </div>
+
+            <div class="space-y-6">
+                <div class="rounded-lg p-6 border border-gray-100 hover:bg-gray-50 transition-colors">
+                    <h3 class="text-lg font-semibold text-gray-900">Class Location</h3>
+                    <p class="text-gray-600 mt-1">Moved to B-303 EE (Note the Change).</p>
+                </div>
+                <div class="rounded-lg p-6 border border-gray-100 hover:bg-gray-50 transition-colors flex flex-col md:flex-row md:items-center md:justify-between">
+                    <div class="md:w-3/4">
+                        <h3 class="text-lg font-semibold text-gray-900">Course Enrollment Form</h3>
+                        <p class="text-gray-600 mt-1">Please fill this up in case you are interested in audit/credit.</p>
+                    </div>
+                    <div class="mt-4 md:mt-0 md:text-right">
+                        <a href="https://goo.gl/forms/Uhmx29E0NPup7Wxa2" class="text-indigo-600 font-medium hover:text-indigo-800 transition-colors text-sm">Form</a>
+                    </div>
+                </div>
+                <div class="rounded-lg p-6 border border-gray-100 hover:bg-gray-50 transition-colors flex flex-col md:flex-row md:items-center md:justify-between">
+                    <div class="md:w-3/4">
+                        <h3 class="text-lg font-semibold text-gray-900">Fifth Assignment</h3>
+                        <p class="text-gray-600 mt-1">Posted. Due on 23-11-2018.</p>
+                    </div>
+                    <div class="mt-4 md:mt-0 md:text-right">
+                        <a href="assignments/HW5.pdf" class="text-indigo-600 font-medium hover:text-indigo-800 transition-colors text-sm">HW5</a>
+                    </div>
+                </div>
+                <div class="rounded-lg p-6 border border-gray-100 hover:bg-gray-50 transition-colors">
+                    <h3 class="text-lg font-semibold text-gray-900">Second Mid-Term Exam Date and Time</h3>
+                    <p class="text-gray-600 mt-1">Nov. 9, 4:00 PM, B308. Open Book, Open Notes.</p>
+                </div>
+                <div class="rounded-lg p-6 border border-gray-100 hover:bg-gray-50 transition-colors">
+                    <h3 class="text-lg font-semibold text-gray-900">Project Midterm Review</h3>
+                    <p class="text-gray-600 mt-1">Nov. 17, 10 AM. Presentation of 5 minutes for individual projects and 10 minutes for group projects: 2 slides on literature survey, 2 slides on progress thus far and 1 slide on future plan of the work.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="logistics" class="mb-20 scroll-mt-24">
+            <h2 class="text-2xl font-bold text-gray-900 mb-8 pb-2 border-b border-gray-200">Logistics</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                <div class="p-6 rounded-xl bg-gray-50 border border-gray-100">
+                    <h3 class="font-semibold text-gray-900 mb-2 flex items-center">
+                        <svg class="w-5 h-5 text-indigo-600 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg>
+                        Instructor
+                    </h3>
+                    <p class="text-gray-900 font-medium text-sm mb-1">Dr. Sriram Ganapathy</p>
+                    <a href="mailto:sriramg@iisc.ac.in" class="text-indigo-600 text-sm hover:underline block mb-2">sriramg@iisc.ac.in</a>
+                    <p class="text-gray-500 text-xs">Office: C 334 (2nd Floor)</p>
+                </div>
+
+                <div class="p-6 rounded-xl bg-gray-50 border border-gray-100">
+                    <h3 class="font-semibold text-gray-900 mb-2 flex items-center">
+                        <svg class="w-5 h-5 text-indigo-600 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                        Class Times
+                    </h3>
+                    <p class="text-gray-600 text-sm">Mon & Wed</p>
+                    <p class="text-gray-900 font-medium text-sm">3:45 PM – 5:15 PM</p>
+                    <p class="text-gray-600 text-sm mt-1">Sun (Tentative)</p>
+                    <p class="text-gray-900 font-medium text-sm">8:30 AM – 10:00 AM</p>
+                    <p class="text-gray-500 text-xs mt-2">Where: EE B308 (moved to B-303 EE)</p>
+                </div>
+
+                <div class="p-6 rounded-xl bg-gray-50 border border-gray-100">
+                    <h3 class="font-semibold text-gray-900 mb-2 flex items-center">
+                        <svg class="w-5 h-5 text-indigo-600 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" /></svg>
+                        Teaching Assistant
+                    </h3>
+                    <p class="text-gray-900 font-medium text-sm mb-1">Akshara Soman</p>
+                    <p class="text-indigo-600 text-sm hover:underline block mb-2">aksharas aT iisc doT ac doT in</p>
+                    <p class="text-gray-500 text-xs">Lab: C 328 (2nd Floor)</p>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section id="syllabus" class="mb-20 scroll-mt-24">
+            <h2 class="text-2xl font-bold text-gray-900 mb-8 pb-2 border-b border-gray-200">Syllabus</h2>
+            <div class="bg-gray-50 rounded-xl p-8 border border-gray-100">
+                <ul class="space-y-4 text-gray-700">
+                    <li class="flex items-start"><span class="mr-2 text-indigo-600 font-bold">•</span><span><strong>Introduction to real world signals</strong> - text, speech, image, video.</span></li>
+                    <li class="flex items-start"><span class="mr-2 text-indigo-600 font-bold">•</span><span><strong>Feature extraction and front-end signal processing</strong> - information rich representations, robustness to noise and artifacts.</span></li>
+                    <li class="flex items-start"><span class="mr-2 text-indigo-600 font-bold">•</span><span><strong>Basics of pattern recognition</strong>, Generative modeling - Gaussian and mixture Gaussian models, hidden Markov models.</span></li>
+                    <li class="flex items-start"><span class="mr-2 text-indigo-600 font-bold">•</span><span><strong>Discriminative modeling</strong> - support vector machines, neural networks and back propagation.</span></li>
+                    <li class="flex items-start"><span class="mr-2 text-indigo-600 font-bold">•</span><span><strong>Introduction to deep learning</strong> - convolutional and recurrent networks, pre-training and practical considerations in deep learning, understanding deep networks.</span></li>
+                    <li class="flex items-start"><span class="mr-2 text-indigo-600 font-bold">•</span><span><strong>Deep generative models</strong> - Autoencoders, Boltzmann machines, Adversarial Networks, Variational Learning.</span></li>
+                    <li class="flex items-start"><span class="mr-2 text-indigo-600 font-bold">•</span><span><strong>Applications</strong> in NLP, computer vision and speech recognition.</span></li>
+                </ul>
+            </div>
+        </section>
+
+
+        <section id="grading" class="mb-20 scroll-mt-24">
+            <h2 class="text-2xl font-bold text-gray-900 mb-8 pb-2 border-b border-gray-200">Grading Details</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+
+                <div class="p-6 bg-indigo-50/50 rounded-xl border border-indigo-100 text-center hover:shadow-sm transition-shadow">
+                    <div class="text-3xl font-bold text-indigo-600 mb-1">15%</div>
+                    <div class="text-sm font-semibold text-gray-700 uppercase tracking-wide">Assignments</div>
+                </div>
+
+                <div class="p-6 bg-indigo-50/50 rounded-xl border border-indigo-100 text-center hover:shadow-sm transition-shadow">
+                    <div class="text-3xl font-bold text-indigo-600 mb-1">20%</div>
+                    <div class="text-sm font-semibold text-gray-700 uppercase tracking-wide">Midterm Exam</div>
+                </div>
+
+                <div class="p-6 bg-indigo-50/50 rounded-xl border border-indigo-100 text-center hover:shadow-sm transition-shadow">
+                    <div class="text-3xl font-bold text-indigo-600 mb-1">30%</div>
+                    <div class="text-sm font-semibold text-gray-700 uppercase tracking-wide">Project</div>
+                </div>
+
+                <div class="p-6 bg-indigo-50/50 rounded-xl border border-indigo-100 text-center hover:shadow-sm transition-shadow">
+                    <div class="text-3xl font-bold text-indigo-600 mb-1">35%</div>
+                    <div class="text-sm font-semibold text-gray-700 uppercase tracking-wide">Final Exam</div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section id="pre-requisites" class="mb-20 scroll-mt-24">
+            <h2 class="text-2xl font-bold text-gray-900 mb-8 pb-2 border-b border-gray-200">Pre-requisites</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+                <div class="border border-gray-100 rounded-lg p-4 hover:bg-gray-50 transition-colors">
+                    <h5 class="font-medium text-gray-900">Must - Random Process/Probability and Statistics</h5>
+                </div>
+
+                <div class="border border-gray-100 rounded-lg p-4 hover:bg-gray-50 transition-colors">
+                    <h5 class="font-medium text-gray-900">Must - Linear Algebra/Matrix Theory</h5>
+                </div>
+
+                <div class="border border-gray-100 rounded-lg p-4 hover:bg-gray-50 transition-colors">
+                    <h5 class="font-medium text-gray-900">Preferred - Basic Digital Signal Processing/Signals and Systems</h5>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="textbooks" class="mb-20 scroll-mt-24">
+            <h2 class="text-2xl font-bold text-gray-900 mb-8 pb-2 border-b border-gray-200">Textbooks</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                <div class="flex items-start p-4 bg-gray-50 rounded-lg">
+                    <div class="flex-shrink-0 h-12 w-10 bg-indigo-100 rounded flex items-center justify-center text-indigo-600 font-serif font-bold">B1</div>
+                    <div class="ml-4">
+                        <h4 class="text-lg font-medium text-gray-900">Pattern Recognition and Machine Learning</h4>
+                        <p class="text-gray-600 text-sm">C.M. Bishop, 2nd Edition, Springer, 2011.</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start p-4 bg-gray-50 rounded-lg">
+                    <div class="flex-shrink-0 h-12 w-10 bg-indigo-100 rounded flex items-center justify-center text-indigo-600 font-serif font-bold">B2</div>
+                    <div class="ml-4">
+                        <h4 class="text-lg font-medium text-gray-900">Neural Networks</h4>
+                        <p class="text-gray-600 text-sm">C.M. Bishop, Oxford Press, 1995.</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start p-4 bg-gray-50 rounded-lg">
+                    <div class="flex-shrink-0 h-12 w-10 bg-indigo-100 rounded flex items-center justify-center text-indigo-600 font-serif font-bold">B3</div>
+                    <div class="ml-4">
+                        <h4 class="text-lg font-medium text-gray-900">Deep Learning</h4>
+                        <p class="text-gray-600 text-sm">I. Goodfellow, Y. Bengio, A. Courville, MIT Press, 2016.</p>
+                        <a href="http://www.deeplearningbook.org" class="text-xs font-semibold text-indigo-600 mt-1 inline-block uppercase tracking-wider border border-indigo-200 px-2 py-0.5 rounded hover:bg-indigo-50">HTML Version</a>
+                    </div>
+                </div>
+
+                <div class="flex items-start p-4 bg-gray-50 rounded-lg">
+                    <div class="flex-shrink-0 h-12 w-10 bg-indigo-100 rounded flex items-center justify-center text-indigo-600 font-serif font-bold">B4</div>
+                    <div class="ml-4">
+                        <h4 class="text-lg font-medium text-gray-900">Fundamentals of Speech Recognition</h4>
+                        <p class="text-gray-600 text-sm">L. Rabiner, H. Juang, Prentice Hall, 1993.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="references" class="scroll-mt-24 pb-20">
+            <h2 class="text-2xl font-bold text-gray-900 mb-8 pb-2 border-b border-gray-200">References</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                <div class="border border-gray-100 rounded-lg p-4 hover:bg-gray-50 transition-colors">
+                    <h5 class="font-medium text-gray-900">Deep Learning: Methods and Applications</h5>
+                    <p class="text-sm text-gray-600 mt-1">Li Deng, Microsoft Technical Report.</p>
+                </div>
+
+                <div class="border border-gray-100 rounded-lg p-4 hover:bg-gray-50 transition-colors">
+                    <h5 class="font-medium text-gray-900">Automatic Speech Recognition - Deep Learning Approach</h5>
+                    <p class="text-sm text-gray-600 mt-1">D. Yu, L. Deng, Springer, 2014.</p>
+                </div>
+
+                <div class="border border-gray-100 rounded-lg p-4 hover:bg-gray-50 transition-colors">
+                    <h5 class="font-medium text-gray-900">Machine Learning for Audio, Image and Video Analysis</h5>
+                    <p class="text-sm text-gray-600 mt-1">F. Camastra, Vinciarelli, Springer, 2007.</p>
+                    <a href="http://www.dcs.gla.ac.uk/~vincia/textbook.pdf" class="text-xs font-semibold text-red-600 mt-2 inline-block uppercase tracking-wider border border-red-200 px-2 py-0.5 rounded hover:bg-red-50">PDF</a>
+                </div>
+
+                <div class="border border-gray-100 rounded-lg p-4 hover:bg-gray-50 transition-colors">
+                    <h5 class="font-medium text-gray-900">Various Published Papers and Online Material</h5>
+                </div>
+
+                <div class="border border-gray-100 rounded-lg p-4 hover:bg-gray-50 transition-colors">
+                    <h5 class="font-medium text-gray-900">Python Programming Basics</h5>
+                    <a href="http://astronomi.erciyes.edu.tr/wp-content/uploads/astronom/pdf/Python%20-%20Andrew%20Johansen.pdf" class="text-xs font-semibold text-red-600 mt-2 inline-block uppercase tracking-wider border border-red-200 px-2 py-0.5 rounded hover:bg-red-50">PDF</a>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="slides" class="mb-20 scroll-mt-24">
+            <div class="flex items-center justify-between mb-8 pb-2 border-b border-gray-200">
+                <h2 class="text-2xl font-bold text-gray-900">Slides</h2>
+            </div>
+
+            <div class="bg-white border border-gray-200 rounded-lg overflow-hidden">
+
+                <div class="hidden md:flex bg-gray-50 border-b border-gray-200 text-xs font-semibold text-gray-500 uppercase tracking-wider">
+                    <div class="p-4 w-1/6">Date</div>
+                    <div class="p-4 w-4/6">Topic</div>
+                    <div class="p-4 w-1/6 text-right">Slides</div>
+                </div>
+
+
+                <div class="divide-y divide-gray-100">
+
+                    <div class="flex flex-col md:flex-row p-4 hover:bg-gray-50 transition-colors">
+                        <div class="md:w-1/6 text-sm font-medium text-gray-500 mb-1 md:mb-0">06-08-2018</div>
+                        <div class="md:w-4/6 text-gray-900 mb-2 md:mb-0">Introduction to real world signals - text, speech, image, video. Learning as a pattern recognition problem. Examples. Roadmap of the course.</div>
+                        <div class="md:w-1/6 md:text-right"><a href="slides/First_Lecture_06_08_2018.pdf" class="text-indigo-600 hover:text-indigo-900 text-sm font-medium">Slides</a></div>
+                    </div>
+
+                    <div class="flex flex-col md:flex-row p-4 hover:bg-gray-50 transition-colors">
+                        <div class="md:w-1/6 text-sm font-medium text-gray-500 mb-1 md:mb-0">08-08-2018</div>
+                        <div class="md:w-4/6 text-gray-900 mb-2 md:mb-0">
+                            Basics of Natural Language Processing - token, document and corpus. TF-IDF features. Language modeling. Smoothing and back-off. Introduction to audio signal processing. DFT, STFT.
+                            <div class="text-xs text-gray-500 mt-1">Refs: Information Extraction Book (Ch. 6) - TF-IDF · Stanford Reading Material - Language Modeling</div>
+                        </div>
+                        <div class="md:w-1/6 md:text-right space-y-1">
+                            <a href="https://nlp.stanford.edu/IR-book/pdf/irbookonlinereading.pdf" class="text-indigo-600 hover:text-indigo-900 text-sm font-medium block">Reading</a>
+                            <a href="https://web.stanford.edu/~jurafsky/slp3/4.pdf" class="text-indigo-600 hover:text-indigo-900 text-sm font-medium block">Reading</a>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col md:flex-row p-4 hover:bg-gray-50 transition-colors">
+                        <div class="md:w-1/6 text-sm font-medium text-gray-500 mb-1 md:mb-0">13-08-2018</div>
+                        <div class="md:w-4/6 text-gray-900 mb-2 md:mb-0">
+                            Revisiting text processing. Perplexity. Short-term Fourier Transform considerations. Time-frequency resolution. Mel-frequency cepstral coefficient (MFCC) features. Image processing - filtering, convolutions. Matrix derivatives.
+                            <div class="text-xs text-gray-500 mt-1">Refs: Columbia Univ. STFT Tutorial · PRML - Bishop (Appendix, Ch. 12)</div>
+                        </div>
+                        <div class="md:w-1/6 md:text-right space-y-1">
+                            <a href="slides/Second_Lecture_08_08_2018.pdf" class="text-indigo-600 hover:text-indigo-900 text-sm font-medium block">Slides</a>
+                            <a href="https://www.ee.columbia.edu/~dpwe/e4810/lectures/L10-fft.pdf" class="text-indigo-600 hover:text-indigo-900 text-sm font-medium block">Reading</a>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col md:flex-row p-4 hover:bg-gray-50 transition-colors">
+                        <div class="md:w-1/6 text-sm font-medium text-gray-500 mb-1 md:mb-0">20-08-2018</div>
+                        <div class="md:w-4/6 text-gray-900 mb-2 md:mb-0">
+                            Unsupervised dimensionality reduction using Principal Component Analysis. Maximum variance formulation. Solution using eigenvectors of data covariance matrix. Minimum error formulation. Whitening and standardization. PCA for high dimensional data.
+                            <div class="text-xs text-gray-500 mt-1">Refs: PRML - Bishop (Ch. 12.1)</div>
+                        </div>
+                        <div class="md:w-1/6"></div>
+                    </div>
+
+                    <div class="flex flex-col md:flex-row p-4 hover:bg-gray-50 transition-colors">
+                        <div class="md:w-1/6 text-sm font-medium text-gray-500 mb-1 md:mb-0">27-08-2018</div>
+                        <div class="md:w-4/6 text-gray-900 mb-2 md:mb-0">
+                            Supervised dimensionality reduction using linear discriminant analysis (LDA). Fisher discriminant. Solution for 2 class LDA. Multi-class LDA. Comparison between PCA and LDA. Introduction to basics of decision theory. Inference and decision problems. Prior, likelihood and posterior. Maximum-a-posteriori decision rule for two class example.
+                            <div class="text-xs text-gray-500 mt-1">Refs: PRML - Bishop (Ch. 4.1.4, Ch. 1.5)</div>
+                        </div>
+                        <div class="md:w-1/6 md:text-right"><a href="slides/Fifth_Lecture_27_08_2018.pdf" class="text-indigo-600 hover:text-indigo-900 text-sm font-medium">Slides</a></div>
+                    </div>
+
+                    <div class="flex flex-col md:flex-row p-4 hover:bg-gray-50 transition-colors">
+                        <div class="md:w-1/6 text-sm font-medium text-gray-500 mb-1 md:mb-0">29-08-2018</div>
+                        <div class="md:w-4/6 text-gray-900 mb-2 md:mb-0">
+                            Decision theory for regression. MMSE estimation. Multi-variate Gaussian Modeling. Interpretation of Covariance. Diagonal and Full Covariance. Maximum Likelihood estimation of mean and covariance.
+                            <div class="text-xs text-gray-500 mt-1">Refs: PRML - Bishop (Ch. 1.6)</div>
+                        </div>
+                        <div class="md:w-1/6 md:text-right"><a href="https://www.cs.cmu.edu/~epxing/Class/10701-08s/recitation/gaussian.pdf" class="text-indigo-600 hover:text-indigo-900 text-sm font-medium">Further Reading</a></div>
+                    </div>
+
+                    <div class="flex flex-col md:flex-row p-4 hover:bg-gray-50 transition-colors bg-amber-50/40">
+                        <div class="md:w-1/6 text-sm font-medium text-gray-500 mb-1 md:mb-0">30-08-2018</div>
+                        <div class="md:w-4/6 text-gray-900 mb-2 md:mb-0">
+                            <span class="font-semibold">Assignment #1.</span> Due on 10-09-2018. Analytical part submitted in class. Coding part submitted via mlsp18.iisc aT gmail doT com.
+                        </div>
+                        <div class="md:w-1/6 md:text-right space-y-1">
+                            <a href="assignments/HW1.pdf" class="text-indigo-600 hover:text-indigo-900 text-sm font-medium block">HW1</a>
+                            <a href="assignments/data/Data.tar.gz" class="text-indigo-600 hover:text-indigo-900 text-sm font-medium block">Image Data</a>
+                            <a href="assignments/data/speech.zip" class="text-indigo-600 hover:text-indigo-900 text-sm font-medium block">Speech Data</a>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col md:flex-row p-4 hover:bg-gray-50 transition-colors">
+                        <div class="md:w-1/6 text-sm font-medium text-gray-500 mb-1 md:mb-0">31-08-2018</div>
+                        <div class="md:w-4/6 text-gray-900 mb-2 md:mb-0">
+                            Short-comings of single Gaussian modeling. Introduction to mixture Gaussian modeling. Properties and parameters. Expectation Maximization algorithm - auxiliary function, proof of convergence.
+                            <div class="text-xs text-gray-500 mt-1">Refs: Tutorial on GMMs · Proof of EM algorithm</div>
+                        </div>
+                        <div class="md:w-1/6 md:text-right space-y-1">
+                            <a href="slides/Sixth_Lecture_31_08_2018.pdf" class="text-indigo-600 hover:text-indigo-900 text-sm font-medium block">Slides</a>
+                            <a href="../MLSP_16/refs/GMM_Tutorial_Reynolds.pdf" class="text-indigo-600 hover:text-indigo-900 text-sm font-medium block">Tutorial</a>
+                            <a href="../MLSP_16/refs/EM_algorithm_Borman.pdf" class="text-indigo-600 hover:text-indigo-900 text-sm font-medium block">EM Proof</a>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col md:flex-row p-4 hover:bg-gray-50 transition-colors">
+                        <div class="md:w-1/6 text-sm font-medium text-gray-500 mb-1 md:mb-0">10-09-2018</div>
+                        <div class="md:w-4/6 text-gray-900 mb-2 md:mb-0">
+                            Expectation Maximization Algorithm for GMMs. Initialization using K-means. Other Considerations in GMMs. GMM example for unsupervised clustering.
+                            <div class="text-xs text-gray-500 mt-1">Refs: EM algorithm for GMMs</div>
+                        </div>
+                        <div class="md:w-1/6 md:text-right space-y-1">
+                            <a href="slides/Seventh_Lecture_10_09_2018.pdf" class="text-indigo-600 hover:text-indigo-900 text-sm font-medium block">Slides</a>
+                            <a href="../MLSP_16/refs/GMM_Bilmes.pdf" class="text-indigo-600 hover:text-indigo-900 text-sm font-medium block">Reading</a>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col md:flex-row p-4 hover:bg-gray-50 transition-colors">
+                        <div class="md:w-1/6 text-sm font-medium text-gray-500 mb-1 md:mb-0">12-09-2018</div>
+                        <div class="md:w-4/6 text-gray-900 mb-2 md:mb-0">
+                            Limitations of GMM modeling for sequence data. Markov Chains. Hidden Markov Model (HMM) definition. Three Problems in HMM. Evaluating the likelihood using HMM (Problem 1), Complexity reduction using forward variable and backward variable.
+                            <div class="text-xs text-gray-500 mt-1">Refs: "Fundamentals of Speech Recognition" - Rabiner and Juang (Ch. 6) · Rabiner Tutorial on HMMs</div>
+                        </div>
+                        <div class="md:w-1/6 md:text-right space-y-1">
+                            <a href="http://www.robots.ox.ac.uk/~vgg/rg/papers/hmm.pdf" class="text-indigo-600 hover:text-indigo-900 text-sm font-medium block">Tutorial</a>
+                            <a href="https://www.robots.ox.ac.uk/~vgg/rg/slides/hmm.pdf" class="text-indigo-600 hover:text-indigo-900 text-sm font-medium block">Rabiner Slides</a>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col md:flex-row p-4 hover:bg-gray-50 transition-colors bg-amber-50/40">
+                        <div class="md:w-1/6 text-sm font-medium text-gray-500 mb-1 md:mb-0">13-09-2018</div>
+                        <div class="md:w-4/6 text-gray-900 mb-2 md:mb-0">
+                            <span class="font-semibold">Assignment #2.</span> Analytical part submitted in class (26-09-2018). Coding part submitted via mlsp18.iisc aT gmail doT com (28-09-2018).
+                        </div>
+                        <div class="md:w-1/6 md:text-right space-y-1">
+                            <a href="assignments/HW2.pdf" class="text-indigo-600 hover:text-indigo-900 text-sm font-medium block">HW2</a>
+                            <a href="assignments/data/speech_music_data.tar.gz" class="text-indigo-600 hover:text-indigo-900 text-sm font-medium block">Speech-Music Data</a>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col md:flex-row p-4 hover:bg-gray-50 transition-colors">
+                        <div class="md:w-1/6 text-sm font-medium text-gray-500 mb-1 md:mb-0">17-09-2018</div>
+                        <div class="md:w-4/6 text-gray-900 mb-2 md:mb-0">Assignment #1 Discussion.</div>
+                        <div class="md:w-1/6"></div>
+                    </div>
+
+                    <div class="flex flex-col md:flex-row p-4 hover:bg-gray-50 transition-colors">
+                        <div class="md:w-1/6 text-sm font-medium text-gray-500 mb-1 md:mb-0">19-09-2018</div>
+                        <div class="md:w-4/6 text-gray-900 mb-2 md:mb-0">
+                            Inferring the best state alignment - Viterbi algorithm for HMM (Solution to Problem II). Training of HMM using EM algorithm - Baum Welch Algorithm (Solution to Problem III).
+                            <div class="text-xs text-gray-500 mt-1">Refs: "Fundamentals of Speech Recognition" - Rabiner and Juang (Ch. 6) · Rabiner Tutorial on HMMs</div>
+                        </div>
+                        <div class="md:w-1/6 md:text-right"><a href="http://www.robots.ox.ac.uk/~vgg/rg/papers/hmm.pdf" class="text-indigo-600 hover:text-indigo-900 text-sm font-medium">Tutorial</a></div>
+                    </div>
+
+                    <div class="flex flex-col md:flex-row p-4 hover:bg-gray-50 transition-colors">
+                        <div class="md:w-1/6 text-sm font-medium text-gray-500 mb-1 md:mb-0">21-09-2018</div>
+                        <div class="md:w-4/6 text-gray-900 mb-2 md:mb-0">
+                            EM algorithm for HMM with GMM state distribution. Dealing with multiple observation sequences. Implementation issues in HMM. Applications of HMMs - action recognition, face emotion tracking.
+                            <div class="text-xs text-gray-500 mt-1">Refs: "Fundamentals of Speech Recognition" - Rabiner and Juang (Ch. 6) · Video analysis with HMMs</div>
+                        </div>
+                        <div class="md:w-1/6 md:text-right"><a href="refs/ApplicationsHMMs.pdf" class="text-indigo-600 hover:text-indigo-900 text-sm font-medium">Reading</a></div>
+                    </div>
+
+                    <div class="flex flex-col md:flex-row p-4 hover:bg-gray-50 transition-colors">
+                        <div class="md:w-1/6 text-sm font-medium text-gray-500 mb-1 md:mb-0">24-09-2018</div>
+                        <div class="md:w-4/6 text-gray-900 mb-2 md:mb-0">
+                            Probabilistic PCA. Problem formulation - generative model of the data. EM algorithm for parameter estimation. Application of PPCA.
+                            <div class="text-xs text-gray-500 mt-1">Refs: PRML - Bishop (Ch. 12.2)</div>
+                        </div>
+                        <div class="md:w-1/6 md:text-right"><a href="slides/twelthLecture_24_09_2018.pdf" class="text-indigo-600 hover:text-indigo-900 text-sm font-medium">Slides</a></div>
+                    </div>
+
+                    <div class="flex flex-col md:flex-row p-4 hover:bg-gray-50 transition-colors">
+                        <div class="md:w-1/6 text-sm font-medium text-gray-500 mb-1 md:mb-0">01-10-2018</div>
+                        <div class="md:w-4/6 text-gray-900 mb-2 md:mb-0">
+                            Regularized linear Regression revisited - dual problem formulation. Gram Matrix. Kernel functions. Examples.
+                            <div class="text-xs text-gray-500 mt-1">Refs: PRML - Bishop (Ch. 6)</div>
+                        </div>
+                        <div class="md:w-1/6"></div>
+                    </div>
+
+                    <div class="flex flex-col md:flex-row p-4 hover:bg-gray-50 transition-colors bg-amber-50/40">
+                        <div class="md:w-1/6 text-sm font-medium text-gray-500 mb-1 md:mb-0">03-10-2018</div>
+                        <div class="md:w-4/6 text-gray-900 mb-2 md:mb-0"><span class="font-semibold">Mid-term Exam.</span></div>
+                        <div class="md:w-1/6"></div>
+                    </div>
+
+                    <div class="flex flex-col md:flex-row p-4 hover:bg-gray-50 transition-colors">
+                        <div class="md:w-1/6 text-sm font-medium text-gray-500 mb-1 md:mb-0">10-10-2018</div>
+                        <div class="md:w-4/6 text-gray-900 mb-2 md:mb-0">
+                            Properties of kernel functions. Rules for constructing kernels. The RBF kernel. Maximum margin classifiers - problem formulation for linearly separable case. Optimization fundamentals - primal and dual problems, strong duality, KKT conditions. Application of KKT conditions to maximum margin classifiers.
+                            <div class="text-xs text-gray-500 mt-1">Refs: PRML - Bishop (Ch. 7) · Introduction to Convex Optimization - Boyd (Ch. 5)</div>
+                        </div>
+                        <div class="md:w-1/6 md:text-right"><a href="https://web.stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf" class="text-indigo-600 hover:text-indigo-900 text-sm font-medium">Reading</a></div>
+                    </div>
+
+                    <div class="flex flex-col md:flex-row p-4 hover:bg-gray-50 transition-colors bg-amber-50/40">
+                        <div class="md:w-1/6 text-sm font-medium text-gray-500 mb-1 md:mb-0">12-10-2018</div>
+                        <div class="md:w-4/6 text-gray-900 mb-2 md:mb-0">
+                            <span class="font-semibold">Assignment #3.</span> Analytical part submitted in class and coding part submitted via mlsp18.iisc aT gmail doT com (22-10-2018).
+                        </div>
+                        <div class="md:w-1/6 md:text-right"><a href="assignments/HW3.pdf" class="text-indigo-600 hover:text-indigo-900 text-sm font-medium">HW3</a></div>
+                    </div>
+
+                    <div class="flex flex-col md:flex-row p-4 hover:bg-gray-50 transition-colors">
+                        <div class="md:w-1/6 text-sm font-medium text-gray-500 mb-1 md:mb-0">12-10-2018</div>
+                        <div class="md:w-4/6 text-gray-900 mb-2 md:mb-0">
+                            Maximum margin classifiers - overlapping class distribution. Slack variables. Primal and Dual formulation. KKT conditions. Applications of SVM for text classification, cancer detection, MNIST.
+                            <div class="text-xs text-gray-500 mt-1">Refs: PRML - Bishop (Ch. 7)</div>
+                        </div>
+                        <div class="md:w-1/6 md:text-right space-y-1">
+                            <a href="slides/SVM_Formulation_12_10_2018.pdf" class="text-indigo-600 hover:text-indigo-900 text-sm font-medium block">Slides</a>
+                            <a href="slides/SVM_application_12_10_2018.pdf" class="text-indigo-600 hover:text-indigo-900 text-sm font-medium block">SVM Applications</a>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col md:flex-row p-4 hover:bg-gray-50 transition-colors">
+                        <div class="md:w-1/6 text-sm font-medium text-gray-500 mb-1 md:mb-0">15-10-2018</div>
+                        <div class="md:w-4/6 text-gray-900 mb-2 md:mb-0">
+                            Support vector regression - primal and dual, KKT conditions. Introduction to artificial neural networks - extension of kernel machines. Perceptron model. Learning rule in perceptron. Multi-layer perceptron.
+                            <div class="text-xs text-gray-500 mt-1">Refs: PRML - Bishop (Ch. 7) · NNPR - Bishop (Ch. 3, 4)</div>
+                        </div>
+                        <div class="md:w-1/6"></div>
+                    </div>
+
+                    <div class="flex flex-col md:flex-row p-4 hover:bg-gray-50 transition-colors">
+                        <div class="md:w-1/6 text-sm font-medium text-gray-500 mb-1 md:mb-0">17-10-2018</div>
+                        <div class="md:w-4/6 text-gray-900 mb-2 md:mb-0">
+                            Forward pass in MLP. Backpropagation algorithm - recursion. Choice of hidden layer activation function.
+                            <div class="text-xs text-gray-500 mt-1">Refs: NNPR - Bishop (Ch. 4)</div>
+                        </div>
+                        <div class="md:w-1/6"></div>
+                    </div>
+
+                    <div class="flex flex-col md:flex-row p-4 hover:bg-gray-50 transition-colors">
+                        <div class="md:w-1/6 text-sm font-medium text-gray-500 mb-1 md:mb-0">22-10-2018</div>
+                        <div class="md:w-4/6 text-gray-900 mb-2 md:mb-0">
+                            Computational complexity in Gradient Descent. Definition of Jacobian and Hessian matrices. Approximation to Hessian matrix computation. Choice of error function. Mean square and conditional expectation. Conditional expectation for classification with one-hot-encoding. Neural networks estimate posterior probabilities.
+                            <div class="text-xs text-gray-500 mt-1">Refs: NNPR - Bishop (Ch. 6)</div>
+                        </div>
+                        <div class="md:w-1/6"></div>
+                    </div>
+
+                    <div class="flex flex-col md:flex-row p-4 hover:bg-gray-50 transition-colors bg-amber-50/40">
+                        <div class="md:w-1/6 text-sm font-medium text-gray-500 mb-1 md:mb-0">24-10-2018</div>
+                        <div class="md:w-4/6 text-gray-900 mb-2 md:mb-0">
+                            <span class="font-semibold">Assignment #4.</span> Analytical part submitted in class and coding part submitted via mlsp18.iisc aT gmail doT com.
+                        </div>
+                        <div class="md:w-1/6 md:text-right"><a href="assignments/HW4.pdf" class="text-indigo-600 hover:text-indigo-900 text-sm font-medium">HW4</a></div>
+                    </div>
+
+                    <div class="flex flex-col md:flex-row p-4 hover:bg-gray-50 transition-colors">
+                        <div class="md:w-1/6 text-sm font-medium text-gray-500 mb-1 md:mb-0">24-10-2018</div>
+                        <div class="md:w-4/6 text-gray-900 mb-2 md:mb-0">
+                            Cross entropy for two class. Expected cross entropy loss and posterior probability estimation. General condition on error function for outputs to be posterior probability. Weight learning - gradient descent method. Properties of gradient descent using quadratic approximation. Learning rate parameter.
+                            <div class="text-xs text-gray-500 mt-1">Refs: NNPR - Bishop (Ch. 6, 7)</div>
+                        </div>
+                        <div class="md:w-1/6 md:text-right"><a href="slides/NN_weight_Update_24_10_2018.pdf" class="text-indigo-600 hover:text-indigo-900 text-sm font-medium">Slides</a></div>
+                    </div>
+
+                    <div class="flex flex-col md:flex-row p-4 hover:bg-gray-50 transition-colors">
+                        <div class="md:w-1/6 text-sm font-medium text-gray-500 mb-1 md:mb-0">29-10-2018</div>
+                        <div class="md:w-4/6 text-gray-900 mb-2 md:mb-0">
+                            Drawbacks of gradient descent. Momentum in learning. Nesterov Accelerated gradient. Second order learning methods. Approximate Hessian. Data preprocessing for Neural networks. Decomposing the error into bias and variance.
+                            <div class="text-xs text-gray-500 mt-1">Refs: NNPR - Bishop (Ch. 7, 9)</div>
+                        </div>
+                        <div class="md:w-1/6"></div>
+                    </div>
+
+                    <div class="flex flex-col md:flex-row p-4 hover:bg-gray-50 transition-colors">
+                        <div class="md:w-1/6 text-sm font-medium text-gray-500 mb-1 md:mb-0">31-10-2018</div>
+                        <div class="md:w-4/6 text-gray-900 mb-2 md:mb-0">
+                            Improving generalization in deep learning. Regularization - weight decay. Impact of regularization on weight update. Early stopping. Training with noise. Committee of Neural networks. Need for deep architectures.
+                            <div class="text-xs text-gray-500 mt-1">Refs: NNPR - Bishop (Ch. 9)</div>
+                        </div>
+                        <div class="md:w-1/6 md:text-right"><a href="slides/NN_generalization_31_10_2018.pdf" class="text-indigo-600 hover:text-indigo-900 text-sm font-medium">Slides</a></div>
+                    </div>
+
+                    <div class="flex flex-col md:flex-row p-4 hover:bg-gray-50 transition-colors">
+                        <div class="md:w-1/6 text-sm font-medium text-gray-500 mb-1 md:mb-0">02-11-2018</div>
+                        <div class="md:w-4/6 text-gray-900 mb-2 md:mb-0">
+                            Convolutional Neural Networks. Computation of convolutions. Number of parameters. Advantages over deep neural networks. Pooling and subsampling. Backpropagation in convolution. Insights in deep convolutional networks.
+                            <div class="text-xs text-gray-500 mt-1">Refs: Deep Learning Book - Goodfellow et al. (Ch. 9)</div>
+                        </div>
+                        <div class="md:w-1/6 md:text-right"><a href="slides/Convolutional_Neural_Networks_02_11_2018.pdf" class="text-indigo-600 hover:text-indigo-900 text-sm font-medium">Slides</a></div>
+                    </div>
+
+                    <div class="flex flex-col md:flex-row p-4 hover:bg-gray-50 transition-colors">
+                        <div class="md:w-1/6 text-sm font-medium text-gray-500 mb-1 md:mb-0">05-11-2018</div>
+                        <div class="md:w-4/6 text-gray-900 mb-2 md:mb-0">
+                            Recurrent Neural Networks. Backpropagation in time. Problem of vanishing gradients. Long short term memory networks. Various RNN architectures and applications.
+                            <div class="text-xs text-gray-500 mt-1">Refs: Deep Learning Book - Goodfellow et al. (Ch. 10)</div>
+                        </div>
+                        <div class="md:w-1/6 md:text-right"><a href="slides/RNN_LSTM_05_11_2018.pdf" class="text-indigo-600 hover:text-indigo-900 text-sm font-medium">Slides</a></div>
+                    </div>
+
+                    <div class="flex flex-col md:flex-row p-4 hover:bg-gray-50 transition-colors bg-amber-50/40">
+                        <div class="md:w-1/6 text-sm font-medium text-gray-500 mb-1 md:mb-0">09-11-2018</div>
+                        <div class="md:w-4/6 text-gray-900 mb-2 md:mb-0"><span class="font-semibold">Mid-term Exam 2.</span></div>
+                        <div class="md:w-1/6"></div>
+                    </div>
+
+                    <div class="flex flex-col md:flex-row p-4 hover:bg-gray-50 transition-colors">
+                        <div class="md:w-1/6 text-sm font-medium text-gray-500 mb-1 md:mb-0">12-11-2018</div>
+                        <div class="md:w-4/6 text-gray-900 mb-2 md:mb-0">
+                            Deep generative modeling - Restricted Boltzmann Machines (RBMs). Conditional independence property. RBM parameter learning. Positive and negative phase of learning. Intuitions behind contrastive divergence algorithm.
+                            <div class="text-xs text-gray-500 mt-1">Refs: Deep Learning Book - Goodfellow et al. (Ch. 18, 19, 20)</div>
+                        </div>
+                        <div class="md:w-1/6 md:text-right"><a href="slides/RBMs_12_11_2018.pdf" class="text-indigo-600 hover:text-indigo-900 text-sm font-medium">Slides</a></div>
+                    </div>
+
+                    <div class="flex flex-col md:flex-row p-4 hover:bg-gray-50 transition-colors bg-amber-50/40">
+                        <div class="md:w-1/6 text-sm font-medium text-gray-500 mb-1 md:mb-0">14-11-2018</div>
+                        <div class="md:w-4/6 text-gray-900 mb-2 md:mb-0">
+                            <span class="font-semibold">Assignment #5.</span> Analytical part and coding part submitted via mlsp18.iisc aT gmail doT com (23-11-2018).
+                        </div>
+                        <div class="md:w-1/6 md:text-right"><a href="assignments/HW5.pdf" class="text-indigo-600 hover:text-indigo-900 text-sm font-medium">HW5</a></div>
+                    </div>
+
+                    <div class="flex flex-col md:flex-row p-4 hover:bg-gray-50 transition-colors">
+                        <div class="md:w-1/6 text-sm font-medium text-gray-500 mb-1 md:mb-0">14-11-2018</div>
+                        <div class="md:w-4/6 text-gray-900 mb-2 md:mb-0">
+                            Autoencoders. Denoising AE. Variational autoencoders. Variational lower bound derivation. KL divergence derivation. Data generation with VAEs.
+                            <div class="text-xs text-gray-500 mt-1">Refs: Kingma's paper · VAE Tutorial</div>
+                        </div>
+                        <div class="md:w-1/6 md:text-right space-y-1">
+                            <a href="slides/VAEs_14_11_2018.pdf" class="text-indigo-600 hover:text-indigo-900 text-sm font-medium block">Slides</a>
+                            <a href="https://pdfs.semanticscholar.org/1dd4/d2d9ddfd5738c0e59f9c64ed18e9532e874a.pdf" class="text-indigo-600 hover:text-indigo-900 text-sm font-medium block">Kingma</a>
+                            <a href="https://arxiv.org/abs/1606.05908" class="text-indigo-600 hover:text-indigo-900 text-sm font-medium block">VAE Tutorial</a>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col md:flex-row p-4 hover:bg-gray-50 transition-colors">
+                        <div class="md:w-1/6 text-sm font-medium text-gray-500 mb-1 md:mb-0">19-11-2018</div>
+                        <div class="md:w-4/6 text-gray-900 mb-2 md:mb-0">Generative Adversarial Nets (GANs), Attention Networks. Summary of MLSP course.</div>
+                        <div class="md:w-1/6 md:text-right"><a href="slides/GANs_19_11_2018.pdf" class="text-indigo-600 hover:text-indigo-900 text-sm font-medium">Slides</a></div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+</main>
+
+<footer class="bg-white mt-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 text-center">
+        <p class="text-gray-500 text-sm">&copy; 2018 Sriram Ganapathy. All rights reserved.</p>
+    </div>
+</footer>
+<script src="../../../js/app.js"></script>
+<script src="../../../js/vendor/jquery-1.9.1.min.js"></script>
+<script src="../../../js/particles.min.js"></script>
+<script src="../../../js/particles.js"></script>
+
+</body>
+</html>

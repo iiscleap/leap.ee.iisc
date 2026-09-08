@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LEAP LABORATORY</title>
+  <link href="../src/output.css" rel="stylesheet">
+</head>
+<body class="bg-white text-gray-800 flex flex-col min-h-screen">
+
+<nav class="container mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-4 sticky top-0 z-50 w-full bg-white">
+    <div class="flex justify-between items-baseline">
+        <div class="sm:text-xl md:text-2xl lg:text-[22px] font-bold text-gray-400 leading-none"><a href="../">LEAP LABORATORY</a></div> 
+        <div class="space-x-6 hidden sm:flex">
+            <a href="../activities/" class="text-gray-600 hover:text-gray-900 transition duration-300 font-medium">Activities</a>
+            <a href="../publications/" class="text-gray-600 hover:text-gray-900 transition duration-300 font-medium">Publications</a>
+            <a href="../members/" class="text-gray-900 hover:text-gray-900 transition duration-300 font-medium">Members</a> 
+            <a href="../highlights/" class="text-gray-600 hover:text-gray-900 transition duration-300 font-medium">Highlights</a>
+            <a href="../gallery/" class="text-gray-600 hover:text-gray-900 transition duration-300 font-medium">Gallery</a>
+            <a href="../#visit-us" class="text-gray-600 hover:text-gray-900 transition duration-300 font-medium">Contact</a>
+        </div>
+        <div id="menu-open-btn" class="space-y-1 lg:hidden cursor-pointer z-20 md:pl-96 sm:pl-32">
+            <div class="w-5 h-0.5 bg-black"></div>
+            <div class="w-5 h-0.5 bg-black"></div>
+            <div class="w-5 h-0.5 bg-black"></div>
+        </div>
+    </div>
+</nav>
+
+<div id="mobile-menu" class="hidden fixed inset-0 bg-white z-[100] p-4">
+    <div class="flex flex-col h-full">
+        <div class="flex justify-end pb-4">
+            <button id="menu-close-btn" class="text-gray-600 hover:text-gray-900 transition duration-300 focus:outline-none cursor-pointer" aria-label="Close menu">
+                <svg class="w-7 h-7" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+                    <path d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+        <nav class="flex flex-col flex-grow items-center justify-center">
+            <a href="../activities/" class="mobile-menu-link block w-full max-w-xs text-center text-xl font-medium text-gray-700 hover:text-gray-900 py-4 border-b border-gray-200 transition duration-300">Activities</a>
+            <a href="../publications/" class="mobile-menu-link block w-full max-w-xs text-center text-xl font-medium text-gray-700 hover:text-gray-900 py-4 border-b border-gray-200 transition duration-300">Publications</a>
+            <a href="../members/" class="mobile-menu-link block w-full max-w-xs text-center text-xl font-medium text-gray-700 hover:text-gray-900 py-4 border-b border-gray-200 transition duration-300">Members</a>
+            <a href="../highlights/" class="mobile-menu-link block w-full max-w-xs text-center text-xl font-medium text-gray-700 hover:text-gray-900 py-4 border-b border-gray-200 transition duration-300">Highlights</a>
+            <a href="../gallery/" class="mobile-menu-link block w-full max-w-xs text-center text-xl font-medium text-gray-700 hover:text-gray-900 py-4 border-b border-gray-200 transition duration-300">Gallery</a>
+            <a href="../#visit-us" class="mobile-menu-link block w-full max-w-xs text-center text-xl font-medium text-gray-700 hover:text-gray-900 py-4 border-b border-gray-200 transition duration-300">Contact</a>
+        </nav>
+    </div>
+</div>
+
+<main class="max-w-5xl mx-auto w-full px-6 py-10">
+    
+    <h1 class="text-3xl font-bold text-gray-800 mb-12 text-center">Our Team</h1>
+
+    <div class="flex justify-center mb-16">
+        <div class="flex flex-col md:flex-row items-center md:items-start bg-white p-6 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300 max-w-3xl w-full gap-8">
+            <div class="w-full h-auto md:h-full md:w-48 shrink-0 overflow-hidden rounded-xl">
+                <img src="../images/sriramProfilePencil.png" alt="Dr. Sriram Ganapthy" class="w-full h-full object-cover rounded-xl">
+            </div>
+            <div class="text-center md:text-left flex-1">
+                <h2 class="text-2xl font-bold text-gray-900">Dr. Sriram Ganapathy</h2>
+                <p class="text-indigo-600 font-medium mb-3">Associate Professor</p>
+                <p class="text-gray-600 leading-relaxed">
+                    Dept. of Electrical Engineering <br>    
+                    Indian Institute of Science, Bangalore, India <br>
+                    Room C 334  <br>
+                    +91 80 2293 2433  <br>
+                    sriramg aT iisc doT ac doT in <br>
+                </p>
+                <div class="mt-4 flex justify-center md:justify-start space-x-3">
+                    <a href="../sriram/" class="text-sm text-gray-400 hover:text-indigo-600 transition">View Profile &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="border-t border-gray-100 mb-12"></div>
+
+    <h1 class="text-3xl font-bold text-gray-800 mb-12 text-left">PhD Candidates</h1>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
+
+        <div class="flex flex-row items-stretch bg-gray-50 rounded-lg hover:bg-white hover:shadow-sm border border-transparent hover:border-gray-100 transition duration-300">
+            <div class="w-28 shrink-0 overflow-hidden rounded-l-lg">
+                <img src="./images/debarpan.jpeg" alt="Debarpan Bhattacharya" class="w-full h-full object-cover">
+            </div>
+            <div class="p-4 flex flex-col justify-center">
+                <h3 class="text-lg font-bold text-gray-900">Debarpan Bhattacharya</h3>
+                <p class="text-sm text-gray-500 mb-2">PhD Candidate</p>
+                <p class="text-sm text-gray-600 line-clamp-2">Research area: Uncertainty estimation, LLMs, Multimodal LLMs, Abstention, Reliable AI.</p>
+                <div class="mt-4 flex justify-center md:justify-start space-x-3">
+                    <a href="https://debarpanbhatta123.github.io/" class="text-sm text-gray-400 hover:text-indigo-600 transition">View Profile &rarr;</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex flex-row items-stretch bg-gray-50 rounded-lg hover:bg-white hover:shadow-sm border border-transparent hover:border-gray-100 transition duration-300">
+            <div class="w-28 shrink-0 overflow-hidden rounded-l-lg">
+                <img src="./images/neeraj_phd.jpeg" alt="Neeraj Agrawal" class="w-full h-full object-cover">
+            </div>
+            <div class="p-4 flex flex-col justify-center">
+                <h3 class="text-lg font-bold text-gray-900">Neeraj Agrawal</h3>
+                <p class="text-sm text-gray-500 mb-2">PhD Candidate</p>
+                <!-- <p class="text-sm text-gray-600 line-clamp-2">Area of Research.</p> -->
+                <div class="mt-4 flex justify-center md:justify-start space-x-3">
+                    <a href="https://agrawal-neeraj.github.io/" class="text-sm text-gray-400 hover:text-indigo-600 transition">Website &rarr;</a>
+                    <a href="https://www.linkedin.com/in/neeraj-agrawal/?originalSubdomain=in" class="text-sm text-gray-400 hover:text-indigo-600 transition">LinkedIn &rarr;</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex flex-row items-stretch bg-gray-50 rounded-lg hover:bg-white hover:shadow-sm border border-transparent hover:border-gray-100 transition duration-300">
+            <div class="w-28 shrink-0 overflow-hidden rounded-l-lg">
+                <img src="./images/samrat.jpeg" alt="Sai Samrat Kankanala" class="w-full h-full object-cover">
+            </div>
+            <div class="p-4 flex flex-col justify-center">
+                <h3 class="text-lg font-bold text-gray-900">Sai Samrat Kankanala</h3>
+                <p class="text-sm text-gray-500 mb-2">PhD Candidate</p>
+                <p class="text-sm text-gray-600 line-clamp-2">Research area: Auditory attention decoding and speech perception analysis through multimodal machine-learning models, aimed at advancing hearing technologies and immersive audio systems.
+</p>
+		<p class="text-sm text-gray-600 line-clamp-2">Key words : Auditory Attention Decoding, Multimodal Modelling</p>
+            </div>
+        </div>
+
+
+        <div class="flex flex-row items-stretch bg-gray-50 rounded-lg hover:bg-white hover:shadow-sm border border-transparent hover:border-gray-100 transition duration-300">
+            <div class="w-28 shrink-0 overflow-hidden rounded-l-lg">
+                <img src="./images/ameen.jpeg" alt="Ameenudeen PE" class="w-full h-full object-cover">
+            </div>
+            <div class="p-4 flex flex-col justify-center">
+                <h3 class="text-lg font-bold text-gray-900">Ameenudeen PE</h3>
+                <p class="text-sm text-gray-500 mb-2">PhD Candidate</p>
+                <p class="text-sm text-gray-600 line-clamp-2">Research area: Representation Learning</p>
+                <div class="mt-4 flex justify-center md:justify-start space-x-3">
+                    <a href="https://ameencet.github.io/" class="text-sm text-gray-400 hover:text-indigo-600 transition">View Profile &rarr;</a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="flex flex-row items-stretch bg-gray-50 rounded-lg hover:bg-white hover:shadow-sm border border-transparent hover:border-gray-100 transition duration-300">
+            <div class="w-28 shrink-0 overflow-hidden rounded-l-lg">
+                <img src="./images/kiran.png" alt="Kiran M K" class="w-full h-full object-cover">
+            </div>
+            <div class="p-4 flex flex-col justify-center">
+                <h3 class="text-lg font-bold text-gray-900">Kiran M K</h3>
+                <p class="text-sm text-gray-500 mb-2">PhD Student</p>
+                <!-- <p class="text-sm text-gray-600 line-clamp-2">Research Area</p> -->
+            </div>
+        </div>
+
+
+        <div class="flex flex-row items-stretch bg-gray-50 rounded-lg hover:bg-white hover:shadow-sm border border-transparent hover:border-gray-100 transition duration-300">
+            <div class="w-28 shrink-0 overflow-hidden rounded-l-lg">
+                <img src="./images/sandra.jpeg" alt="Sandra Kakkarayil Jayakumar" class="w-full h-full object-cover">
+            </div>
+            <div class="p-4 flex flex-col justify-center">
+                <h3 class="text-lg font-bold text-gray-900">Sandra Kakkarayil Jayakumar</h3>
+                <p class="text-sm text-gray-500 mb-2">PhD Student</p>
+                <!-- <p class="text-sm text-gray-600 line-clamp-2">Research Area</p> -->
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="border-t border-gray-100 mb-12"></div>
+
+    <h1 class="text-3xl font-bold text-gray-800 mb-12 text-left">Administrative Secretary</h1>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
+
+        <div class="flex flex-row items-stretch bg-gray-50 rounded-lg hover:bg-white hover:shadow-sm border border-transparent hover:border-gray-100 transition duration-300">
+            <div class="w-28 shrink-0 overflow-hidden rounded-l-lg">
+                <img src="./images/prathiba.jpeg" alt="Pratibha R Narayanaswamy" class="w-full h-full object-cover">
+            </div>
+            <div class="p-4 flex flex-col justify-center">
+                <h3 class="text-lg font-bold text-gray-900">Pratibha R Narayanaswamy</h3>
+            </div>
+        </div>
+
+        <div class="flex flex-row items-stretch bg-gray-50 rounded-lg hover:bg-white hover:shadow-sm border border-transparent hover:border-gray-100 transition duration-300">
+            <div class="w-28 shrink-0 overflow-hidden rounded-l-lg">
+                <img src="./images/sunitha.jpg" alt="Sunitha K" class="w-full h-full object-cover">
+            </div>
+            <div class="p-4 flex flex-col justify-center">
+                <h3 class="text-lg font-bold text-gray-900">Sunitha K</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="border-t border-gray-100 mb-12"></div>
+
+    <h1 class="text-3xl font-bold text-gray-800 mb-12 text-left">M-Tech Students</h1>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
+
+        <div class="flex flex-row items-stretch bg-gray-50 rounded-lg hover:bg-white hover:shadow-sm border border-transparent hover:border-gray-100 transition duration-300">
+            <div class="w-28 shrink-0 overflow-hidden rounded-l-lg">
+                <img src="./images/sathvik.jpg" alt="Sathvik Manthri" class="w-full h-full object-cover">
+            </div>
+            <div class="p-4 flex flex-col justify-center">
+                <h3 class="text-lg font-bold text-gray-900">Sathvik Manthri</h3>
+                <p class="text-sm text-gray-500 mb-2">Dual Degree: BTech and MTech in Math and Computing (2022 - 2027)</p>
+            </div>
+        </div>
+
+        <div class="flex flex-row items-stretch bg-gray-50 rounded-lg hover:bg-white hover:shadow-sm border border-transparent hover:border-gray-100 transition duration-300">
+            <div class="w-28 shrink-0 overflow-hidden rounded-l-lg">
+                <img src="./images/placeholder.svg" alt="Annamaneni Rohit" class="w-full h-full object-cover">
+            </div>
+            <div class="p-4 flex flex-col justify-center">
+                <h3 class="text-lg font-bold text-gray-900">Annamaneni Rohit</h3>
+                <p class="text-sm text-gray-500 mb-2">M-Tech in Signal Processing (2025 - 2027)</p>
+            </div>
+        </div>
+
+
+        <div class="flex flex-row items-stretch bg-gray-50 rounded-lg hover:bg-white hover:shadow-sm border border-transparent hover:border-gray-100 transition duration-300">
+            <div class="w-28 shrink-0 overflow-hidden rounded-l-lg">
+                <img src="./images/placeholder.svg" alt="J Cifal Shaul" class="w-full h-full object-cover">
+            </div>
+            <div class="p-4 flex flex-col justify-center">
+                <h3 class="text-lg font-bold text-gray-900">J Cifal Shaul</h3>
+                <p class="text-sm text-gray-500 mb-2">M-Tech in Signal Processing (2025 - 2027)</p>
+            </div>
+        </div>
+
+
+        <div class="flex flex-row items-stretch bg-gray-50 rounded-lg hover:bg-white hover:shadow-sm border border-transparent hover:border-gray-100 transition duration-300">
+            <div class="w-28 shrink-0 overflow-hidden rounded-l-lg">
+                <img src="./images/placeholder.svg" alt="Kriti Chaudhari" class="w-full h-full object-cover">
+            </div>
+            <div class="p-4 flex flex-col justify-center">
+                <h3 class="text-lg font-bold text-gray-900">Kriti Chaudhari</h3>
+                <p class="text-sm text-gray-500 mb-2">M-Tech in AI (2025 - 2027)</p>
+            </div>
+        </div>
+
+
+        <div class="flex flex-row items-stretch bg-gray-50 rounded-lg hover:bg-white hover:shadow-sm border border-transparent hover:border-gray-100 transition duration-300">
+            <div class="w-28 shrink-0 overflow-hidden rounded-l-lg">
+                <img src="./images/placeholder.svg" alt="Rajat Mohan Yadav" class="w-full h-full object-cover">
+            </div>
+            <div class="p-4 flex flex-col justify-center">
+                <h3 class="text-lg font-bold text-gray-900">Rajat Mohan Yadav</h3>
+                <p class="text-sm text-gray-500 mb-2">M-Tech in AI (2025 - 2027)</p>
+            </div>
+        </div>
+
+        <div class="flex flex-row items-stretch bg-gray-50 rounded-lg hover:bg-white hover:shadow-sm border border-transparent hover:border-gray-100 transition duration-300">
+            <div class="w-28 shrink-0 overflow-hidden rounded-l-lg">
+                <img src="./images/chirag.jpg" alt="Chirag Bansal" class="w-full h-full object-cover">
+            </div>
+            <div class="p-4 flex flex-col justify-center">
+                <h3 class="text-lg font-bold text-gray-900">Chirag Bansal</h3>
+                <p class="text-sm text-gray-500 mb-2">M-Tech (Research) in Signal Processing (2026 - 2028)</p>
+            </div>
+        </div>
+
+        <div class="flex flex-row items-stretch bg-gray-50 rounded-lg hover:bg-white hover:shadow-sm border border-transparent hover:border-gray-100 transition duration-300">
+            <div class="w-28 shrink-0 overflow-hidden rounded-l-lg">
+                <img src="./images/shivam.jpg" alt="Shivam" class="w-full h-full object-cover">
+            </div>
+            <div class="p-4 flex flex-col justify-center">
+                <h3 class="text-lg font-bold text-gray-900">Shivam</h3>
+                <p class="text-sm text-gray-500 mb-2">M-Tech (Research) in AI (2026 - 2028)</p>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <div class="border-t border-gray-100 mb-12"></div>
+
+    <h1 class="text-3xl font-bold text-gray-800 mb-12 text-left">BTech Students</h1>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
+
+        <div class="flex flex-row items-stretch bg-gray-50 rounded-lg hover:bg-white hover:shadow-sm border border-transparent hover:border-gray-100 transition duration-300">
+            <div class="w-28 shrink-0 overflow-hidden rounded-l-lg">
+                <img src="./images/saksham.jpg" alt="Saksham Maitri" class="w-full h-full object-cover">
+            </div>
+            <div class="p-4 flex flex-col justify-center">
+                <h3 class="text-lg font-bold text-gray-900">Saksham Maitri</h3>
+                <p class="text-sm text-gray-500 mb-2">BTech in Math and Computing (2023-2027)</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="border-t border-gray-100 mb-12"></div>
+
+    <h1 class="text-3xl font-bold text-gray-800 mb-12 text-left">Research Fellows</h1>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
+
+        <div class="flex flex-row items-stretch bg-gray-50 rounded-lg hover:bg-white hover:shadow-sm border border-transparent hover:border-gray-100 transition duration-300">
+            <div class="w-28 shrink-0 overflow-hidden rounded-l-lg">
+                <img src="./images/malay.jpeg" alt="Malay Milind Phadke" class="w-full h-full object-cover">
+            </div>
+            <div class="p-4 flex flex-col justify-center">
+                <h3 class="text-lg font-bold text-gray-900">Malay Milind Phadke</h3>
+                <p class="text-sm text-gray-500 mb-2">Research Fellow</p>
+                <p class="text-sm text-gray-600 line-clamp-2">Research area: Uncertainty Estimation, Multimodal LLMs, Abstention, Reliable AI, Post training with Uncertainty(RLUQ)</p>
+            </div>
+        </div>
+
+
+        <div class="flex flex-row items-stretch bg-gray-50 rounded-lg hover:bg-white hover:shadow-sm border border-transparent hover:border-gray-100 transition duration-300">
+            <div class="w-28 shrink-0 overflow-hidden rounded-l-lg">
+                <img src="./images/kalash.jpeg" alt="Kalash Kala" class="w-full h-full object-cover">
+            </div>
+            <div class="p-4 flex flex-col justify-center">
+                <h3 class="text-lg font-bold text-gray-900">Kalash Kala</h3>
+                <p class="text-sm text-gray-500 mb-2">Research Fellow</p>
+            </div>
+        </div>
+
+
+        <div class="flex flex-row items-stretch bg-gray-50 rounded-lg hover:bg-white hover:shadow-sm border border-transparent hover:border-gray-100 transition duration-300">
+            <div class="w-28 shrink-0 overflow-hidden rounded-l-lg">
+                <img src="./images/harini.jpg" alt="K Harini Sri" class="w-full h-full object-cover">
+            </div>
+            <div class="p-4 flex flex-col justify-center">
+                <h3 class="text-lg font-bold text-gray-900">K Harini Sri</h3>
+                <p class="text-sm text-gray-500 mb-2">Research Fellow</p>
+            </div>
+        </div>
+
+
+        <div class="flex flex-row items-stretch bg-gray-50 rounded-lg hover:bg-white hover:shadow-sm border border-transparent hover:border-gray-100 transition duration-300">
+            <div class="w-28 shrink-0 overflow-hidden rounded-l-lg">
+                <img src="./images/gopika.jpg" alt="A Gopika Nair" class="w-full h-full object-cover">
+            </div>
+            <div class="p-4 flex flex-col justify-center">
+                <h3 class="text-lg font-bold text-gray-900">A Gopika Nair</h3>
+                <p class="text-sm text-gray-500 mb-2">Research Fellow</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="border-t border-gray-100 mb-12"></div>
+
+    <h1 class="text-3xl font-bold text-gray-800 mb-12 text-left">Research Intern</h1>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
+
+        <div class="flex flex-row items-stretch bg-gray-50 rounded-lg hover:bg-white hover:shadow-sm border border-transparent hover:border-gray-100 transition duration-300">
+            <div class="w-28 shrink-0 overflow-hidden rounded-l-lg">
+                <img src="./images/parthiv.jpg" alt="Parthiv Patel" class="w-full h-full object-cover">
+            </div>
+            <div class="p-4 flex flex-col justify-center">
+                <h3 class="text-lg font-bold text-gray-900">Parthiv Patel</h3>
+                <p class="text-sm text-gray-500 mb-2">Research Intern</p>
+            </div>
+        </div>
+
+      </div>
+
+    <div class="border-t border-gray-100 mb-12"></div>
+
+    <div class="mt-20"></div>
+
+    <section>
+        <h1 class="text-3xl font-bold text-gray-800 pb-6">Past Postdoctoral Researchers</h1>
+
+        <div class="flex flex-col">
+            
+
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between py-4 border-b border-gray-100 hover:bg-gray-50 transition duration-200 px-2 -mx-2 rounded-lg">
+              <div class="sm:w-1/3 font-bold text-gray-900 mb-1 sm:mb-0"><a href="https://www.iitp.ac.in/people-2/ee-faculty/1435:dr-somanath-pradhan">Somanath Pradhan</a></div>
+              <div class="flex-1 text-sm text-gray-600">Assistant Professor, IIT Patna</div>
+            </div>
+
+
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between py-4 border-b border-gray-100 hover:bg-gray-50 transition duration-200 px-2 -mx-2 rounded-lg">
+              <div class="sm:w-1/3 font-bold text-gray-900 mb-1 sm:mb-0"><a href="https://www.iitjammu.ac.in/ee/faculty.html?faculty=~shikhabaghel">Shikha Baghel</a></div>
+              <div class="flex-1 text-sm text-gray-600">Assistant Professor, IIT Jammu</div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between py-4 border-b border-gray-100 hover:bg-gray-50 transition duration-200 px-2 -mx-2 rounded-lg">
+                <div class="sm:w-1/3 font-bold text-gray-900 mb-1 sm:mb-0"><a href="https://neerajww.github.io/">Neeraj Sharma</a></div>
+                <div class="flex-1 text-sm text-gray-600">Assistant Professor, IIT Guwahati</div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between py-4 border-b border-gray-100 hover:bg-gray-50 transition duration-200 px-2 -mx-2 rounded-lg">
+                <div class="sm:w-1/3 font-bold text-gray-900 mb-1 sm:mb-0"><a href="https://www.ee.iitb.ac.in/web/people/srikanth-raj-chetupalli/">Srikanth Raj</a></div>
+                <div class="flex-1 text-sm text-gray-600">Assistant Professor, IIT Bombay</div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between py-4 border-b border-gray-100 hover:bg-gray-50 transition duration-200 px-2 -mx-2 rounded-lg">
+                <div class="sm:w-1/3 font-bold text-gray-900 mb-1 sm:mb-0"><a href="https://shareefbabu.github.io/">Kalluri Shareef Babu</a></div>
+                <div class="flex-1 text-sm text-gray-600">Assistant Professor, UPES, Dehradun</div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between py-4 border-b border-gray-100 hover:bg-gray-50 transition duration-200 px-2 -mx-2 rounded-lg">
+                <div class="sm:w-1/3 font-bold text-gray-900 mb-1 sm:mb-0"><a href="https://mrinmoy-iitg.github.io/Webpage/index.html">Mrinmoy Bhattacharjee</a></div>
+                <div class="flex-1 text-sm text-gray-600">Assistant Professor, IIT Jammu</div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between py-4 border-b border-gray-100 hover:bg-gray-50 transition duration-200 px-2 -mx-2 rounded-lg">
+                <div class="sm:w-1/3 font-bold text-gray-900 mb-1 sm:mb-0">Dhanya E</div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between py-4 border-b border-gray-100 hover:bg-gray-50 transition duration-200 px-2 -mx-2 rounded-lg">
+                <div class="sm:w-1/3 font-bold text-gray-900 mb-1 sm:mb-0"><a href="https://noumidaa.github.io/NoumdaA.webpage/" class="hover:text-indigo-600 transition">Noumida A</a></div>
+            </div>
+
+        </div>
+    </section>
+
+
+        <div class="border-t border-gray-100 mb-12"></div>
+
+    <div class="mt-20"></div>
+
+    <section>
+        <h1 class="text-3xl font-bold text-gray-800 pb-6">Past PhD Students</h1>
+
+        <div class="flex flex-col">
+            
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between py-4 border-b border-gray-100 hover:bg-gray-50 transition duration-200 px-2 -mx-2 rounded-lg">
+                <div class="sm:w-1/3 font-bold text-gray-900 mb-1 sm:mb-0">Purvi Agrawal</div>
+                <div class="flex-1 text-sm text-gray-600">Applied ML Scientist, Sanas</div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between py-4 border-b border-gray-100 hover:bg-gray-50 transition duration-200 px-2 -mx-2 rounded-lg">
+                <div class="sm:w-1/3 font-bold text-gray-900 mb-1 sm:mb-0">Shreyas Ramoji</div>
+                <div class="flex-1 text-sm text-gray-600">Postdoctoral Research Associate, The University of Sheffield</div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between py-4 border-b border-gray-100 hover:bg-gray-50 transition duration-200 px-2 -mx-2 rounded-lg">
+                <div class="sm:w-1/3 font-bold text-gray-900 mb-1 sm:mb-0"><a href="https://sites.google.com/site/anurenjan/">Anurenjan P.R.</a></div>
+                <div class="flex-1 text-sm text-gray-600">Associate Professor, College of Engineering Trivandrum</div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between py-4 border-b border-gray-100 hover:bg-gray-50 transition duration-200 px-2 -mx-2 rounded-lg">
+                <div class="sm:w-1/3 font-bold text-gray-900 mb-1 sm:mb-0">Prachi Singh</div>
+                <div class="flex-1 text-sm text-gray-600">Postdoctoral Researcher, Brno University of Technology</div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between py-4 border-b border-gray-100 hover:bg-gray-50 transition duration-200 px-2 -mx-2 rounded-lg">
+                <div class="sm:w-1/3 font-bold text-gray-900 mb-1 sm:mb-0">Akshara Soman</div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between py-4 border-b border-gray-100 hover:bg-gray-50 transition duration-200 px-2 -mx-2 rounded-lg">
+                <div class="sm:w-1/3 font-bold text-gray-900 mb-1 sm:mb-0"><a href="https://soumya-dutta.github.io/" class="hover:text-indigo-600 transition">Soumya Dutta</a></div>
+                <div class="flex-1 text-sm text-gray-600">Research Scientist, Adobe Research</div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <div class="border-t border-gray-100 mb-12"></div>
+
+    <div class="mt-20"></div>
+
+    <section>
+        <h1 class="text-3xl font-bold text-gray-800 pb-6">Past Research Fellows</h1>
+
+        <div class="flex flex-col">
+
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between py-4 border-b border-gray-100 hover:bg-gray-50 transition duration-200 px-2 -mx-2 rounded-lg">
+                <div class="sm:w-1/3 font-bold text-gray-900 mb-1 sm:mb-0"><a href="https://hrishikeshhpillai.com/" class="hover:text-indigo-600 transition">Hrishikesh H. Pillai</a></div>
+                <div class="flex-1 text-sm text-gray-600">Formerly Junior Research Fellow</div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between py-4 border-b border-gray-100 hover:bg-gray-50 transition duration-200 px-2 -mx-2 rounded-lg">
+                <div class="sm:w-1/3 font-bold text-gray-900 mb-1 sm:mb-0">Benjamin Debbarma</div>
+                <div class="flex-1 text-sm text-gray-600">Formerly Research Fellow</div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section>
+      <h1 class="text-3xl font-bold text-gray-800 pb-6">Visitors</h1>
+
+      <div class="flex flex-col">
+          
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between py-4 border-b border-gray-100 hover:bg-gray-50 transition duration-200 px-2 -mx-2 rounded-lg">
+              <div class="sm:w-80 text-sm text-gray-400 font-mono mb-1 sm:mb-0">Jan 2019 - March 2019</div>
+              <div class="sm:w-1/3 font-bold text-gray-900 mb-1 sm:mb-0">Dr. Ahilan K</div>
+              <div class="flex-1 text-sm text-gray-600">Faculty, University of Jaffna</div>
+          </div><div class="flex flex-col sm:flex-row sm:items-center justify-between py-4 border-b border-gray-100 hover:bg-gray-50 transition duration-200 px-2 -mx-2 rounded-lg">
+              <div class="sm:w-80 text-sm text-gray-400 font-mono mb-1 sm:mb-0">May 2016 - July 2016</div>
+              <div class="sm:w-1/3 font-bold text-gray-900 mb-1 sm:mb-0">Dr. Deepu Vijayasenan</div>
+              <div class="flex-1 text-sm text-gray-600">Asst. Prof., NIT, Surathkal</div>
+          </div><h1 class="text-3xl font-bold text-gray-800 pb-6">Past Masters Students</h1>
+
+      <div class="flex flex-col">
+          
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between py-4 border-b border-gray-100 hover:bg-gray-50 transition duration-200 px-2 -mx-2 rounded-lg">
+              <div class="sm:w-80 text-sm text-gray-400 font-mono mb-1 sm:mb-0">2024 - 2026</div>
+              <div class="sm:w-1/3 font-bold text-gray-900 mb-1 sm:mb-0">Md Sahil Ansari</div>
+              <div class="flex-1 text-sm text-gray-600">M-Tech in Signal Processing</div>
+          </div><div class="flex flex-col sm:flex-row sm:items-center justify-between py-4 border-b border-gray-100 hover:bg-gray-50 transition duration-200 px-2 -mx-2 rounded-lg">
+              <div class="sm:w-80 text-sm text-gray-400 font-mono mb-1 sm:mb-0">2024 - 2026</div>
+              <div class="sm:w-1/3 font-bold text-gray-900 mb-1 sm:mb-0">Kirtan Jatin Vora</div>
+              <div class="flex-1 text-sm text-gray-600">M-Tech in Signal Processing</div>
+          </div><div class="flex flex-col sm:flex-row sm:items-center justify-between py-4 border-b border-gray-100 hover:bg-gray-50 transition duration-200 px-2 -mx-2 rounded-lg">
+              <div class="sm:w-80 text-sm text-gray-400 font-mono mb-1 sm:mb-0">2024 - 2026</div>
+              <div class="sm:w-1/3 font-bold text-gray-900 mb-1 sm:mb-0">Geeth George</div>
+              <div class="flex-1 text-sm text-gray-600">M-Tech in AI</div>
+          </div><div class="flex flex-col sm:flex-row sm:items-center justify-between py-4 border-b border-gray-100 hover:bg-gray-50 transition duration-200 px-2 -mx-2 rounded-lg">
+              <div class="sm:w-80 text-sm text-gray-400 font-mono mb-1 sm:mb-0">2024 - 2026</div>
+              <div class="sm:w-1/3 font-bold text-gray-900 mb-1 sm:mb-0">Ram Chandra</div>
+              <div class="flex-1 text-sm text-gray-600">M-Tech in Signal Processing</div>
+          </div><div class="flex flex-col sm:flex-row sm:items-center justify-between py-4 border-b border-gray-100 hover:bg-gray-50 transition duration-200 px-2 -mx-2 rounded-lg">
+              <div class="sm:w-80 text-sm text-gray-400 font-mono mb-1 sm:mb-0">2024 - 2026</div>
+              <div class="sm:w-1/3 font-bold text-gray-900 mb-1 sm:mb-0">Ankita Meena</div>
+              <div class="flex-1 text-sm text-gray-600">M-Tech in Signal Processing</div>
+          </div><div class="flex flex-col sm:flex-row sm:items-center justify-between py-4 border-b border-gray-100 hover:bg-gray-50 transition duration-200 px-2 -mx-2 rounded-lg">
+              <div class="sm:w-80 text-sm text-gray-400 font-mono mb-1 sm:mb-0">2024 - 2026</div>
+              <div class="sm:w-1/3 font-bold text-gray-900 mb-1 sm:mb-0">Victor Azad</div>
+              <div class="flex-1 text-sm text-gray-600">M-Tech in AI</div>
+          </div><div class="flex flex-col sm:flex-row sm:items-center justify-between py-4 border-b border-gray-100 hover:bg-gray-50 transition duration-200 px-2 -mx-2 rounded-lg">
+              <div class="sm:w-80 text-sm text-gray-400 font-mono mb-1 sm:mb-0">2020 - 2023</div>
+              <div class="sm:w-1/3 font-bold text-gray-900 mb-1 sm:mb-0">Chandrakant Harjpal</div>
+              <div class="flex-1 text-sm text-gray-600">MTech Research</div>
+          </div><div class="flex flex-col sm:flex-row sm:items-center justify-between py-4 border-b border-gray-100 hover:bg-gray-50 transition duration-200 px-2 -mx-2 rounded-lg">
+              <div class="sm:w-80 text-sm text-gray-400 font-mono mb-1 sm:mb-0">2020 - 2022</div>
+              <div class="sm:w-1/3 font-bold text-gray-900 mb-1 sm:mb-0">Hariom Choudhary</div>
+              <div class="flex-1 text-sm text-gray-600">MTech, CSA</div>
+          </div><div class="flex flex-col sm:flex-row sm:items-center justify-between py-4 border-b border-gray-100 hover:bg-gray-50 transition duration-200 px-2 -mx-2 rounded-lg">
+              <div class="sm:w-80 text-sm text-gray-400 font-mono mb-1 sm:mb-0">2020 - 2022</div>
+              <div class="sm:w-1/3 font-bold text-gray-900 mb-1 sm:mb-0">Amrit Kaul</div>
+              <div class="flex-1 text-sm text-gray-600">MTech, AI</div>
+          </div><div class="flex flex-col sm:flex-row sm:items-center justify-between py-4 border-b border-gray-100 hover:bg-gray-50 transition duration-200 px-2 -mx-2 rounded-lg">
+              <div class="sm:w-80 text-sm text-gray-400 font-mono mb-1 sm:mb-0">2020 - 2022</div>
+              <div class="sm:w-1/3 font-bold text-gray-900 mb-1 sm:mb-0">Tarun Sai</div>
+              <div class="flex-1 text-sm text-gray-600">MTech, AI</div>
+          </div><div class="flex flex-col sm:flex-row sm:items-center justify-between py-4 border-b border-gray-100 hover:bg-gray-50 transition duration-200 px-2 -mx-2 rounded-lg">
+              <div class="sm:w-80 text-sm text-gray-400 font-mono mb-1 sm:mb-0">2020 - 2022</div>
+              <div class="sm:w-1/3 font-bold text-gray-900 mb-1 sm:mb-0">Praneeth</div>
+              <div class="flex-1 text-sm text-gray-600">MTech, SP</div>
+          </div><div class="flex flex-col sm:flex-row sm:items-center justify-between py-4 border-b border-gray-100 hover:bg-gray-50 transition duration-200 px-2 -mx-2 rounded-lg">
+              <div class="sm:w-80 text-sm text-gray-400 font-mono mb-1 sm:mb-0">2019 - 2021</div>
+              <div class="sm:w-1/3 font-bold text-gray-900 mb-1 sm:mb-0">Shrutina Agarwal</div>
+              <div class="flex-1 text-sm text-gray-600">MTech, AI</div>
+          </div><div class="flex flex-col sm:flex-row sm:items-center justify-between py-4 border-b border-gray-100 hover:bg-gray-50 transition duration-200 px-2 -mx-2 rounded-lg">
+              <div class="sm:w-80 text-sm text-gray-400 font-mono mb-1 sm:mb-0">2019 - 2021</div>
+              <div class="sm:w-1/3 font-bold text-gray-900 mb-1 sm:mb-0">Rajat Varma</div>
+              <div class="flex-1 text-sm text-gray-600">MTech, AI</div>
+          </div><div class="flex flex-col sm:flex-row sm:items-center justify-between py-4 border-b border-gray-100 hover:bg-gray-50 transition duration-200 px-2 -mx-2 rounded-lg">
+              <div class="sm:w-80 text-sm text-gray-400 font-mono mb-1 sm:mb-0">2019 - 2021</div>
+              <div class="sm:w-1/3 font-bold text-gray-900 mb-1 sm:mb-0">Debottam Dutta</div>
+              <div class="flex-1 text-sm text-gray-600">MTech, SP</div>
+          </div><div class="flex flex-col sm:flex-row sm:items-center justify-between py-4 border-b border-gray-100 hover:bg-gray-50 transition duration-200 px-2 -mx-2 rounded-lg">
+              <div class="sm:w-80 text-sm text-gray-400 font-mono mb-1 sm:mb-0">2017 - 2020</div>
+              <div class="sm:w-1/3 font-bold text-gray-900 mb-1 sm:mb-0">Jaswanth Reddy K</div>
+              <div class="flex-1 text-sm text-gray-600">MTech Research</div>
+          </div><div class="flex flex-col sm:flex-row sm:items-center justify-between py-4 border-b border-gray-100 hover:bg-gray-50 transition duration-200 px-2 -mx-2 rounded-lg">
+              <div class="sm:w-80 text-sm text-gray-400 font-mono mb-1 sm:mb-0">2017 - 2019</div>
+              <div class="sm:w-1/3 font-bold text-gray-900 mb-1 sm:mb-0">Anand Mohan</div>
+              <div class="flex-1 text-sm text-gray-600">MTech SE</div>
+          </div><div class="flex flex-col sm:flex-row sm:items-center justify-between py-4 border-b border-gray-100 hover:bg-gray-50 transition duration-200 px-2 -mx-2 rounded-lg">
+              <div class="sm:w-80 text-sm text-gray-400 font-mono mb-1 sm:mb-0">2017 - 2019</div>
+              <div class="sm:w-1/3 font-bold text-gray-900 mb-1 sm:mb-0">Karan Malhotra</div>
+              <div class="flex-1 text-sm text-gray-600">MTech SE</div>
+          </div><div class="flex flex-col sm:flex-row sm:items-center justify-between py-4 border-b border-gray-100 hover:bg-gray-50 transition duration-200 px-2 -mx-2 rounded-lg">
+              <div class="sm:w-80 text-sm text-gray-400 font-mono mb-1 sm:mb-0">2017 - 2019</div>
+              <div class="sm:w-1/3 font-bold text-gray-900 mb-1 sm:mb-0">Kiran Praveen</div>
+              <div class="flex-1 text-sm text-gray-600">MTech SP</div>
+          </div><div class="flex flex-col sm:flex-row sm:items-center justify-between py-4 border-b border-gray-100 hover:bg-gray-50 transition duration-200 px-2 -mx-2 rounded-lg">
+              <div class="sm:w-80 text-sm text-gray-400 font-mono mb-1 sm:mb-0">2017 - 2019</div>
+              <div class="sm:w-1/3 font-bold text-gray-900 mb-1 sm:mb-0">Shubham Bansal</div>
+              <div class="flex-1 text-sm text-gray-600">MTech SE</div>
+          </div><div class="flex flex-col sm:flex-row sm:items-center justify-between py-4 border-b border-gray-100 hover:bg-gray-50 transition duration-200 px-2 -mx-2 rounded-lg">
+              <div class="sm:w-80 text-sm text-gray-400 font-mono mb-1 sm:mb-0">2016 - 2018</div>
+              <div class="sm:w-1/3 font-bold text-gray-900 mb-1 sm:mb-0">Arif Abdullah</div>
+              <div class="flex-1 text-sm text-gray-600">MTech SP</div>
+          </div><div class="flex flex-col sm:flex-row sm:items-center justify-between py-4 border-b border-gray-100 hover:bg-gray-50 transition duration-200 px-2 -mx-2 rounded-lg">
+              <div class="sm:w-80 text-sm text-gray-400 font-mono mb-1 sm:mb-0">2016 - 2018</div>
+              <div class="sm:w-1/3 font-bold text-gray-900 mb-1 sm:mb-0">Sonali Singh</div>
+              <div class="flex-1 text-sm text-gray-600">MTech SSA</div>
+          </div><div class="flex flex-col sm:flex-row sm:items-center justify-between py-4 border-b border-gray-100 hover:bg-gray-50 transition duration-200 px-2 -mx-2 rounded-lg">
+              <div class="sm:w-80 text-sm text-gray-400 font-mono mb-1 sm:mb-0">2016 - 2018</div>
+              <div class="sm:w-1/3 font-bold text-gray-900 mb-1 sm:mb-0">Bharat Krishna</div>
+              <div class="flex-1 text-sm text-gray-600">MTech SSA</div>
+          </div><div class="flex flex-col sm:flex-row sm:items-center justify-between py-4 border-b border-gray-100 hover:bg-gray-50 transition duration-200 px-2 -mx-2 rounded-lg">
+              <div class="sm:w-80 text-sm text-gray-400 font-mono mb-1 sm:mb-0">2016 - 2018</div>
+              <div class="sm:w-1/3 font-bold text-gray-900 mb-1 sm:mb-0">Kinsuk Sarkar</div>
+              <div class="flex-1 text-sm text-gray-600">MTech SSA</div>
+          </div><h1 class="text-3xl font-bold text-gray-800 pb-6">Past Project Associates</h1>
+
+        <div class="flex flex-col">
+           
+	            <div class="flex flex-col sm:flex-row sm:items-center justify-between py-4 border-b border-gray-100 hover:bg-gray-50 transition duration-200 px-2 -mx-2 rounded-lg">
+                <div class="sm:w-80 text-sm text-gray-400 font-mono mb-1 sm:mb-0">2024 - 2025</div>
+                <div class="sm:w-1/3 font-bold text-gray-900 mb-1 sm:mb-0">Viveka Salinamakki</div>
+             <div class="flex-1 text-sm text-gray-600">Currently senior AI/ML Software Developer at a Stealth startup</div>
+            </div>
+ 
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between py-4 border-b border-gray-100 hover:bg-gray-50 transition duration-200 px-2 -mx-2 rounded-lg">
+                <div class="sm:w-80 text-sm text-gray-400 font-mono mb-1 sm:mb-0">2024 - 2025</div>
+                <div class="sm:w-1/3 font-bold text-gray-900 mb-1 sm:mb-0">Apoorva Anand Kulkarni</div>
+                <div class="flex-1 text-sm text-gray-600">Currently MS student, UMD</div>
+            </div>
+
+
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between py-4 border-b border-gray-100 hover:bg-gray-50 transition duration-200 px-2 -mx-2 rounded-lg">
+                <div class="sm:w-80 text-sm text-gray-400 font-mono mb-1 sm:mb-0">2024 - 2025</div>
+                <div class="sm:w-1/3 font-bold text-gray-900 mb-1 sm:mb-0">Varada R</div>
+                <div class="flex-1 text-sm text-gray-600">Currently working at Mobius by Gaian</div>
+            </div>
+        </div>
+
+      </section>
+
+
+
+
+      <section>
+        <h1 class="text-3xl font-bold text-gray-800 pb-6">Past Project Assistants</h1>
+
+        <div class="flex flex-col">
+            
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between py-4 border-b border-gray-100 hover:bg-gray-50 transition duration-200 px-2 -mx-2 rounded-lg">
+                <div class="sm:w-80 text-sm text-gray-400 font-mono mb-1 sm:mb-0">2019 - 2021</div>
+                <div class="sm:w-1/3 font-bold text-gray-900 mb-1 sm:mb-0">Anirudh Sreeram</div>
+                <div class="flex-1 text-sm text-gray-600"></div>
+            </div>
+
+
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between py-4 border-b border-gray-100 hover:bg-gray-50 transition duration-200 px-2 -mx-2 rounded-lg">
+                <div class="sm:w-80 text-sm text-gray-400 font-mono mb-1 sm:mb-0">2019 - 2021</div>
+                <div class="sm:w-1/3 font-bold text-gray-900 mb-1 sm:mb-0">Prashant Krishnan</div>
+                <div class="flex-1 text-sm text-gray-600"></div>
+            </div>
+
+
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between py-4 border-b border-gray-100 hover:bg-gray-50 transition duration-200 px-2 -mx-2 rounded-lg">
+                <div class="sm:w-80 text-sm text-gray-400 font-mono mb-1 sm:mb-0">2019 - 2021</div>
+                <div class="sm:w-1/3 font-bold text-gray-900 mb-1 sm:mb-0">Venkat Krishnamohan</div>
+                <div class="flex-1 text-sm text-gray-600"></div>
+            </div>
+
+
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between py-4 border-b border-gray-100 hover:bg-gray-50 transition duration-200 px-2 -mx-2 rounded-lg">
+                <div class="sm:w-80 text-sm text-gray-400 font-mono mb-1 sm:mb-0">2019 - 2021</div>
+                <div class="sm:w-1/3 font-bold text-gray-900 mb-1 sm:mb-0">Ananya Muguli</div>
+                <div class="flex-1 text-sm text-gray-600"></div>
+            </div>
+
+
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between py-4 border-b border-gray-100 hover:bg-gray-50 transition duration-200 px-2 -mx-2 rounded-lg">
+                <div class="sm:w-80 text-sm text-gray-400 font-mono mb-1 sm:mb-0">2019 - 2021</div>
+                <div class="sm:w-1/3 font-bold text-gray-900 mb-1 sm:mb-0">Harsha Vardhan M A</div>
+                <div class="flex-1 text-sm text-gray-600"></div>
+            </div>
+
+
+
+
+
+
+
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between py-4 border-b border-gray-100 hover:bg-gray-50 transition duration-200 px-2 -mx-2 rounded-lg">
+                <div class="sm:w-80 text-sm text-gray-400 font-mono mb-1 sm:mb-0">2018 - 2019</div>
+                <div class="sm:w-1/3 font-bold text-gray-900 mb-1 sm:mb-0">Prathibha R</div>
+                <div class="flex-1 text-sm text-gray-600"></div>
+            </div>
+
+
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between py-4 border-b border-gray-100 hover:bg-gray-50 transition duration-200 px-2 -mx-2 rounded-lg">
+                <div class="sm:w-80 text-sm text-gray-400 font-mono mb-1 sm:mb-0">2018 - 2019</div>
+                <div class="sm:w-1/3 font-bold text-gray-900 mb-1 sm:mb-0">Vaishnavi Y</div>
+                <div class="flex-1 text-sm text-gray-600"></div>
+            </div>
+
+
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between py-4 border-b border-gray-100 hover:bg-gray-50 transition duration-200 px-2 -mx-2 rounded-lg">
+                <div class="sm:w-80 text-sm text-gray-400 font-mono mb-1 sm:mb-0">2018 - 2019</div>
+                <div class="sm:w-1/3 font-bold text-gray-900 mb-1 sm:mb-0">Harsha Vardhan M A</div>
+                <div class="flex-1 text-sm text-gray-600"></div>
+            </div>
+
+
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between py-4 border-b border-gray-100 hover:bg-gray-50 transition duration-200 px-2 -mx-2 rounded-lg">
+                <div class="sm:w-80 text-sm text-gray-400 font-mono mb-1 sm:mb-0">2018 - 2019</div>
+                <div class="sm:w-1/3 font-bold text-gray-900 mb-1 sm:mb-0">Shilpa Anand </div>
+                <div class="flex-1 text-sm text-gray-600"></div>
+            </div>
+
+
+
+
+
+
+
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between py-4 border-b border-gray-100 hover:bg-gray-50 transition duration-200 px-2 -mx-2 rounded-lg">
+                <div class="sm:w-80 text-sm text-gray-400 font-mono mb-1 sm:mb-0">2017 - 2018</div>
+                <div class="sm:w-1/3 font-bold text-gray-900 mb-1 sm:mb-0">C R Madhavan</div>
+                <div class="flex-1 text-sm text-gray-600"></div>
+            </div>
+
+
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between py-4 border-b border-gray-100 hover:bg-gray-50 transition duration-200 px-2 -mx-2 rounded-lg">
+                <div class="sm:w-80 text-sm text-gray-400 font-mono mb-1 sm:mb-0">2017 - 2018</div>
+                <div class="sm:w-1/3 font-bold text-gray-900 mb-1 sm:mb-0">Madhumita Harish</div>
+                <div class="flex-1 text-sm text-gray-600"></div>
+            </div>
+
+
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between py-4 border-b border-gray-100 hover:bg-gray-50 transition duration-200 px-2 -mx-2 rounded-lg">
+                <div class="sm:w-80 text-sm text-gray-400 font-mono mb-1 sm:mb-0">2017 - 2018</div>
+                <div class="sm:w-1/3 font-bold text-gray-900 mb-1 sm:mb-0">Shobhana Ganesh</div>
+                <div class="flex-1 text-sm text-gray-600"></div>
+            </div>
+
+
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between py-4 border-b border-gray-100 hover:bg-gray-50 transition duration-200 px-2 -mx-2 rounded-lg">
+                <div class="sm:w-80 text-sm text-gray-400 font-mono mb-1 sm:mb-0">2017 - 2018</div>
+                <div class="sm:w-1/3 font-bold text-gray-900 mb-1 sm:mb-0">Satish Kumar (jointly with Dr. Deepu Vijayasenan, NIT, Surathkal)</div>
+                <div class="flex-1 text-sm text-gray-600"></div>
+            </div>
+
+
+
+
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between py-4 border-b border-gray-100 hover:bg-gray-50 transition duration-200 px-2 -mx-2 rounded-lg">
+                <div class="sm:w-80 text-sm text-gray-400 font-mono mb-1 sm:mb-0">2016 - 2017</div>
+                <div class="sm:w-1/3 font-bold text-gray-900 mb-1 sm:mb-0">Dhanush B K</div>
+                <div class="flex-1 text-sm text-gray-600"></div>
+            </div>
+
+
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between py-4 border-b border-gray-100 hover:bg-gray-50 transition duration-200 px-2 -mx-2 rounded-lg">
+                <div class="sm:w-80 text-sm text-gray-400 font-mono mb-1 sm:mb-0">2016 - 2017</div>
+                <div class="sm:w-1/3 font-bold text-gray-900 mb-1 sm:mb-0">Rajath Kumar M P</div>
+                <div class="flex-1 text-sm text-gray-600"></div>
+            </div>
+
+
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between py-4 border-b border-gray-100 hover:bg-gray-50 transition duration-200 px-2 -mx-2 rounded-lg">
+                <div class="sm:w-80 text-sm text-gray-400 font-mono mb-1 sm:mb-0">2016 - 2017</div>
+                <div class="sm:w-1/3 font-bold text-gray-900 mb-1 sm:mb-0">Harish Kashyap</div>
+                <div class="flex-1 text-sm text-gray-600"></div>
+            </div>
+        </div>
+
+      </section>
+
+
+      <section>
+        <h1 class="text-3xl font-bold text-gray-800 pb-6">Past Interns</h1>
+
+        <div class="flex flex-col">
+            
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between py-4 border-b border-gray-100 hover:bg-gray-50 transition duration-200 px-2 -mx-2 rounded-lg">
+                <div class="sm:w-80 text-sm text-gray-400 font-mono mb-1 sm:mb-0">May - July 2026</div>
+                <div class="sm:w-1/3 font-bold text-gray-900 mb-1 sm:mb-0">Abhineet More</div>
+                <div class="flex-1 text-sm text-gray-600">Research Intern</div>
+            </div><div class="flex flex-col sm:flex-row sm:items-center justify-between py-4 border-b border-gray-100 hover:bg-gray-50 transition duration-200 px-2 -mx-2 rounded-lg">
+                <div class="sm:w-80 text-sm text-gray-400 font-mono mb-1 sm:mb-0">May - July 2026</div>
+                <div class="sm:w-1/3 font-bold text-gray-900 mb-1 sm:mb-0">Nakibul Islam</div>
+                <div class="flex-1 text-sm text-gray-600">Research Intern</div>
+            </div><div class="flex flex-col sm:flex-row sm:items-center justify-between py-4 border-b border-gray-100 hover:bg-gray-50 transition duration-200 px-2 -mx-2 rounded-lg">
+                <div class="sm:w-80 text-sm text-gray-400 font-mono mb-1 sm:mb-0">May - July 2026</div>
+                <div class="sm:w-1/3 font-bold text-gray-900 mb-1 sm:mb-0">Debosmita Roy</div>
+                <div class="flex-1 text-sm text-gray-600">Research Intern</div>
+            </div><div class="flex flex-col sm:flex-row sm:items-center justify-between py-4 border-b border-gray-100 hover:bg-gray-50 transition duration-200 px-2 -mx-2 rounded-lg">
+                <div class="sm:w-80 text-sm text-gray-400 font-mono mb-1 sm:mb-0">May - July 2026</div>
+                <div class="sm:w-1/3 font-bold text-gray-900 mb-1 sm:mb-0">Anmol</div>
+                <div class="flex-1 text-sm text-gray-600">Research Intern</div>
+            </div><div class="flex flex-col sm:flex-row sm:items-center justify-between py-4 border-b border-gray-100 hover:bg-gray-50 transition duration-200 px-2 -mx-2 rounded-lg">
+                <div class="sm:w-80 text-sm text-gray-400 font-mono mb-1 sm:mb-0">May - August 2026</div>
+                <div class="sm:w-1/3 font-bold text-gray-900 mb-1 sm:mb-0">Jahnavi Veerla</div>
+                <div class="flex-1 text-sm text-gray-600">Research Intern</div>
+            </div><div class="flex flex-col sm:flex-row sm:items-center justify-between py-4 border-b border-gray-100 hover:bg-gray-50 transition duration-200 px-2 -mx-2 rounded-lg">
+                <div class="sm:w-80 text-sm text-gray-400 font-mono mb-1 sm:mb-0">August 2025 - March 2026</div>
+                <div class="sm:w-1/3 font-bold text-gray-900 mb-1 sm:mb-0"><a href="https://manasn.me" class="hover:text-indigo-600 transition">Manas Sameer Nanivadekar</a></div>
+                <div class="flex-1 text-sm text-gray-600">Research Intern</div>
+            </div><div class="flex flex-col sm:flex-row sm:items-center justify-between py-4 border-b border-gray-100 hover:bg-gray-50 transition duration-200 px-2 -mx-2 rounded-lg">
+                <div class="sm:w-80 text-sm text-gray-400 font-mono mb-1 sm:mb-0">May - July 2025</div>
+                <div class="sm:w-1/3 font-bold text-gray-900 mb-1 sm:mb-0">Arathi B</div>
+                <div class="flex-1 text-sm text-gray-600">Research Intern</div>
+            </div><div class="flex flex-col sm:flex-row sm:items-center justify-between py-4 border-b border-gray-100 hover:bg-gray-50 transition duration-200 px-2 -mx-2 rounded-lg">
+                <div class="sm:w-80 text-sm text-gray-400 font-mono mb-1 sm:mb-0">May - July 2025</div>
+                <div class="sm:w-1/3 font-bold text-gray-900 mb-1 sm:mb-0">Harshan</div>
+                <div class="flex-1 text-sm text-gray-600">Research Intern</div>
+            </div><div class="flex flex-col sm:flex-row sm:items-center justify-between py-4 border-b border-gray-100 hover:bg-gray-50 transition duration-200 px-2 -mx-2 rounded-lg">
+                <div class="sm:w-80 text-sm text-gray-400 font-mono mb-1 sm:mb-0">January - June 2025</div>
+                <div class="sm:w-1/3 font-bold text-gray-900 mb-1 sm:mb-0">Charumathi N</div>
+                <div class="flex-1 text-sm text-gray-600">Research Intern</div>
+            </div><div class="flex flex-col sm:flex-row sm:items-center justify-between py-4 border-b border-gray-100 hover:bg-gray-50 transition duration-200 px-2 -mx-2 rounded-lg">
+                <div class="sm:w-80 text-sm text-gray-400 font-mono mb-1 sm:mb-0">January - June 2025</div>
+                <div class="sm:w-1/3 font-bold text-gray-900 mb-1 sm:mb-0">Smruthi B</div>
+                <div class="flex-1 text-sm text-gray-600">Research Intern</div>
+            </div><div class="flex flex-col sm:flex-row sm:items-center justify-between py-4 border-b border-gray-100 hover:bg-gray-50 transition duration-200 px-2 -mx-2 rounded-lg">
+                <div class="sm:w-80 text-sm text-gray-400 font-mono mb-1 sm:mb-0">Summer 2019</div>
+                <div class="sm:w-1/3 font-bold text-gray-900 mb-1 sm:mb-0">Rakesh</div>
+                <div class="flex-1 text-sm text-gray-600"></div>
+            </div><div class="flex flex-col sm:flex-row sm:items-center justify-between py-4 border-b border-gray-100 hover:bg-gray-50 transition duration-200 px-2 -mx-2 rounded-lg">
+                <div class="sm:w-80 text-sm text-gray-400 font-mono mb-1 sm:mb-0">Jan 2019 - May 2019</div>
+                <div class="sm:w-1/3 font-bold text-gray-900 mb-1 sm:mb-0">Prashant</div>
+                <div class="flex-1 text-sm text-gray-600"></div>
+            </div><div class="flex flex-col sm:flex-row sm:items-center justify-between py-4 border-b border-gray-100 hover:bg-gray-50 transition duration-200 px-2 -mx-2 rounded-lg">
+                <div class="sm:w-80 text-sm text-gray-400 font-mono mb-1 sm:mb-0">Aug 2018 - Dec 2018</div>
+                <div class="sm:w-1/3 font-bold text-gray-900 mb-1 sm:mb-0">Anmol Bhatia</div>
+                <div class="flex-1 text-sm text-gray-600"></div>
+            </div><div class="flex flex-col sm:flex-row sm:items-center justify-between py-4 border-b border-gray-100 hover:bg-gray-50 transition duration-200 px-2 -mx-2 rounded-lg">
+                <div class="sm:w-80 text-sm text-gray-400 font-mono mb-1 sm:mb-0">Summer 2018</div>
+                <div class="sm:w-1/3 font-bold text-gray-900 mb-1 sm:mb-0">Anand</div>
+                <div class="flex-1 text-sm text-gray-600"></div>
+            </div><div class="flex flex-col sm:flex-row sm:items-center justify-between py-4 border-b border-gray-100 hover:bg-gray-50 transition duration-200 px-2 -mx-2 rounded-lg">
+                <div class="sm:w-80 text-sm text-gray-400 font-mono mb-1 sm:mb-0">May 2018 - Aug 2018</div>
+                <div class="sm:w-1/3 font-bold text-gray-900 mb-1 sm:mb-0">Bhargavram MV</div>
+                <div class="flex-1 text-sm text-gray-600"></div>
+            </div><div class="flex flex-col sm:flex-row sm:items-center justify-between py-4 border-b border-gray-100 hover:bg-gray-50 transition duration-200 px-2 -mx-2 rounded-lg">
+                <div class="sm:w-80 text-sm text-gray-400 font-mono mb-1 sm:mb-0">2017</div>
+                <div class="sm:w-1/3 font-bold text-gray-900 mb-1 sm:mb-0">Sarfaraz Jelil</div>
+                <div class="flex-1 text-sm text-gray-600">Research Intern</div>
+            </div><div class="flex flex-col sm:flex-row sm:items-center justify-between py-4 border-b border-gray-100 hover:bg-gray-50 transition duration-200 px-2 -mx-2 rounded-lg">
+                <div class="sm:w-80 text-sm text-gray-400 font-mono mb-1 sm:mb-0">2017</div>
+                <div class="sm:w-1/3 font-bold text-gray-900 mb-1 sm:mb-0">Chirasvi R</div>
+                <div class="flex-1 text-sm text-gray-600">Research Intern</div>
+            </div><div class="flex flex-col sm:flex-row sm:items-center justify-between py-4 border-b border-gray-100 hover:bg-gray-50 transition duration-200 px-2 -mx-2 rounded-lg">
+                <div class="sm:w-80 text-sm text-gray-400 font-mono mb-1 sm:mb-0">2017</div>
+                <div class="sm:w-1/3 font-bold text-gray-900 mb-1 sm:mb-0">Krishna Naveen</div>
+                <div class="flex-1 text-sm text-gray-600">Undergraduate Summer Intern</div>
+            </div><div class="flex flex-col sm:flex-row sm:items-center justify-between py-4 border-b border-gray-100 hover:bg-gray-50 transition duration-200 px-2 -mx-2 rounded-lg">
+                <div class="sm:w-80 text-sm text-gray-400 font-mono mb-1 sm:mb-0">2017</div>
+                <div class="sm:w-1/3 font-bold text-gray-900 mb-1 sm:mb-0">Siddharth Mittal</div>
+                <div class="flex-1 text-sm text-gray-600">Undergraduate Summer Intern</div>
+            </div><div class="flex flex-col sm:flex-row sm:items-center justify-between py-4 border-b border-gray-100 hover:bg-gray-50 transition duration-200 px-2 -mx-2 rounded-lg">
+                <div class="sm:w-80 text-sm text-gray-400 font-mono mb-1 sm:mb-0">2017</div>
+                <div class="sm:w-1/3 font-bold text-gray-900 mb-1 sm:mb-0">Harshita P</div>
+                <div class="flex-1 text-sm text-gray-600">Undergraduate Summer Intern</div>
+            </div><div class="flex flex-col sm:flex-row sm:items-center justify-between py-4 border-b border-gray-100 hover:bg-gray-50 transition duration-200 px-2 -mx-2 rounded-lg">
+                <div class="sm:w-80 text-sm text-gray-400 font-mono mb-1 sm:mb-0">2016</div>
+                <div class="sm:w-1/3 font-bold text-gray-900 mb-1 sm:mb-0">Mehak Gupta</div>
+                <div class="flex-1 text-sm text-gray-600"></div>
+            </div><div class="flex flex-col sm:flex-row sm:items-center justify-between py-4 border-b border-gray-100 hover:bg-gray-50 transition duration-200 px-2 -mx-2 rounded-lg">
+                <div class="sm:w-80 text-sm text-gray-400 font-mono mb-1 sm:mb-0">2016</div>
+                <div class="sm:w-1/3 font-bold text-gray-900 mb-1 sm:mb-0">Amit M</div>
+                <div class="flex-1 text-sm text-gray-600"></div>
+            </div><div class="flex flex-col sm:flex-row sm:items-center justify-between py-4 border-b border-gray-100 hover:bg-gray-50 transition duration-200 px-2 -mx-2 rounded-lg">
+                <div class="sm:w-80 text-sm text-gray-400 font-mono mb-1 sm:mb-0">2016</div>
+                <div class="sm:w-1/3 font-bold text-gray-900 mb-1 sm:mb-0">Sarthak A</div>
+                <div class="flex-1 text-sm text-gray-600"></div>
+            </div><div class="flex flex-col sm:flex-row sm:items-center justify-between py-4 border-b border-gray-100 hover:bg-gray-50 transition duration-200 px-2 -mx-2 rounded-lg">
+                <div class="sm:w-80 text-sm text-gray-400 font-mono mb-1 sm:mb-0">2016</div>
+                <div class="sm:w-1/3 font-bold text-gray-900 mb-1 sm:mb-0">Anubhab G</div>
+                <div class="flex-1 text-sm text-gray-600"></div>
+            </div><div class="flex flex-col sm:flex-row sm:items-center justify-between py-4 border-b border-gray-100 hover:bg-gray-50 transition duration-200 px-2 -mx-2 rounded-lg">
+                <div class="sm:w-80 text-sm text-gray-400 font-mono mb-1 sm:mb-0">2016</div>
+                <div class="sm:w-1/3 font-bold text-gray-900 mb-1 sm:mb-0">Srivathsan S</div>
+                <div class="flex-1 text-sm text-gray-600"></div>
+            </div><div class="flex flex-col sm:flex-row sm:items-center justify-between py-4 border-b border-gray-100 hover:bg-gray-50 transition duration-200 px-2 -mx-2 rounded-lg">
+                <div class="sm:w-80 text-sm text-gray-400 font-mono mb-1 sm:mb-0">2016</div>
+                <div class="sm:w-1/3 font-bold text-gray-900 mb-1 sm:mb-0">Narendra S</div>
+                <div class="flex-1 text-sm text-gray-600"></div>
+            </div><div class="flex flex-col sm:flex-row sm:items-center justify-between py-4 border-b border-gray-100 hover:bg-gray-50 transition duration-200 px-2 -mx-2 rounded-lg">
+                <div class="sm:w-80 text-sm text-gray-400 font-mono mb-1 sm:mb-0">2016</div>
+                <div class="sm:w-1/3 font-bold text-gray-900 mb-1 sm:mb-0">Venkata P</div>
+                <div class="flex-1 text-sm text-gray-600"></div>
+            </div><div class="flex flex-col sm:flex-row sm:items-center justify-between py-4 border-b border-gray-100 hover:bg-gray-50 transition duration-200 px-2 -mx-2 rounded-lg">
+                <div class="sm:w-80 text-sm text-gray-400 font-mono mb-1 sm:mb-0">2016</div>
+                <div class="sm:w-1/3 font-bold text-gray-900 mb-1 sm:mb-0">Suparna S</div>
+                <div class="flex-1 text-sm text-gray-600"></div>
+            </div><div class="flex flex-col sm:flex-row sm:items-center justify-between py-4 border-b border-gray-100 hover:bg-gray-50 transition duration-200 px-2 -mx-2 rounded-lg">
+                <div class="sm:w-80 text-sm text-gray-400 font-mono mb-1 sm:mb-0">2016</div>
+                <div class="sm:w-1/3 font-bold text-gray-900 mb-1 sm:mb-0">Aarthy R</div>
+                <div class="flex-1 text-sm text-gray-600"></div>
+            </div><div class="flex flex-col sm:flex-row sm:items-center justify-between py-4 border-b border-gray-100 hover:bg-gray-50 transition duration-200 px-2 -mx-2 rounded-lg">
+                <div class="sm:w-80 text-sm text-gray-400 font-mono mb-1 sm:mb-0">2016</div>
+                <div class="sm:w-1/3 font-bold text-gray-900 mb-1 sm:mb-0">Likhita C</div>
+                <div class="flex-1 text-sm text-gray-600"></div>
+            </div><div class="flex flex-col sm:flex-row sm:items-center justify-between py-4 border-b border-gray-100 hover:bg-gray-50 transition duration-200 px-2 -mx-2 rounded-lg">
+                <div class="sm:w-80 text-sm text-gray-400 font-mono mb-1 sm:mb-0">2016</div>
+                <div class="sm:w-1/3 font-bold text-gray-900 mb-1 sm:mb-0">Shashank D</div>
+                <div class="flex-1 text-sm text-gray-600"></div>
+            </div><div class="flex flex-col sm:flex-row sm:items-center justify-between py-4 border-b border-gray-100 hover:bg-gray-50 transition duration-200 px-2 -mx-2 rounded-lg">
+                <div class="sm:w-80 text-sm text-gray-400 font-mono mb-1 sm:mb-0">2016</div>
+                <div class="sm:w-1/3 font-bold text-gray-900 mb-1 sm:mb-0">Sanmathi K</div>
+                <div class="flex-1 text-sm text-gray-600"></div>
+            </div></main>
+
+<footer class="bg-white mt-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 text-center">
+        <p class="text-gray-500 text-sm">&copy; 2025 LEAP Lab. All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="../js/app.js"></script>
+</body>
+</html>
+

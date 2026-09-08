@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEAB LABORATORY</title>
+    <link href="../src/output.css" rel="stylesheet"> 
+</head>
+<body class="bg-white text-gray-800">
+
+<nav class="container mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-4 sticky top-0 z-50 w-full bg-white">
+    <div class="flex justify-between items-baseline">
+        <div class="sm:text-xl md:text-2xl lg:text-[22px] font-bold text-gray-400 leading-none"><a href="../">LEAP LABORATORY</a></div> 
+        <div class="space-x-6 hidden sm:flex">
+            <a href="../activities/" class="text-gray-600 hover:text-gray-900 transition duration-300 font-medium">Activities</a>
+            <a href="../publications/" class="text-gray-600 hover:text-gray-900 transition duration-300 font-medium">Publications</a>
+            <a href="../members" class="text-gray-600 hover:text-gray-900 transition duration-300 font-medium">Members</a>
+            <a href="../highlights/" class="text-gray-600 hover:text-gray-900 transition duration-300 font-medium">Highlights</a>
+            <a href="../gallery/" class="text-gray-600 hover:text-gray-900 transition duration-300 font-medium">Gallery</a>
+            <a href="../#visit-us" class="text-gray-600 hover:text-gray-900 transition duration-300 font-medium">Contact</a>
+        </div>
+        <div id="menu-open-btn" class="space-y-1 lg:hidden cursor-pointer z-20 md:pl-96 sm:pl-32">
+            <div class="w-5 h-0.5 bg-black"></div>
+            <div class="w-5 h-0.5 bg-black"></div>
+            <div class="w-5 h-0.5 bg-black"></div>
+        </div>
+
+    </div>
+</nav>
+
+
+<div id="mobile-menu" class="hidden fixed inset-0 bg-white z-[100] p-4">
+    <div class="flex flex-col h-full">
+
+        <div class="flex justify-end pb-4">
+            <button id="menu-close-btn" class="text-gray-600 hover:text-gray-900 transition duration-300 focus:outline-none cursor-pointer" aria-label="Close menu">
+                <svg class="w-7 h-7" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+                    <path d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+
+
+        <nav class="flex flex-col flex-grow items-center justify-center">
+            <a href="../activities/" class="mobile-menu-link block w-full max-w-xs text-center text-xl font-medium text-gray-700 hover:text-gray-900 py-4 border-b border-gray-200 transition duration-300">Activities</a>
+            <a href="../publications/" class="mobile-menu-link block w-full max-w-xs text-center text-xl font-medium text-gray-700 hover:text-gray-900 py-4 border-b border-gray-200 transition duration-300">Publications</a>
+            <a href="../members/" class="mobile-menu-link block w-full max-w-xs text-center text-xl font-medium text-gray-700 hover:text-gray-900 py-4 border-b border-gray-200 transition duration-300">Members</a>
+            <a href="../highlights/" class="mobile-menu-link block w-full max-w-xs text-center text-xl font-medium text-gray-700 hover:text-gray-900 py-4 border-b border-gray-200 transition duration-300">Highlights</a>
+            <a href="../gallery/" class="mobile-menu-link block w-full max-w-xs text-center text-xl font-medium text-gray-700 hover:text-gray-900 py-4 border-b border-gray-200 transition duration-300">Gallery</a>
+            <a href="../#visit-us" class="mobile-menu-link block w-full max-w-xs text-center text-xl font-medium text-gray-700 hover:text-gray-900 py-4 border-b border-gray-200 transition duration-300">Contact</a>
+        </nav>
+    </div>
+</div>
+
+
+    <main class="max-w-6xl mx-auto px-6 sm:px-12 lg:px-24 py-8">
+        <h2 class="text-4xl font-semibold text-gray-800 mb-4 text-center pb-8 pt-8">Activities</h2>
+
+
+
+        <section class="py-16 px-12 group hover:bg-gray-50 transition-colors duration-300">
+            <div class="flex flex-col md:flex-row gap-8">
+                
+                <div class="md:w-1/4 flex-shrink-0">
+                    <h2 class="text-3xl font-light tracking-wide text-black">What We Do.</h2>
+                </div>
+                
+                <div class="md:w-3/4">
+                    <p class="text-lg text-gray-700 leading-relaxed max-w-4xl">
+                        Research in information extraction of audio and speech signals. Determining the robust representations which can succintly capture speech characteristics while being invariant to noise. Learning models which describe the multiple realizations of the data. Understanding and modeling the auditory system.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 px-12 group hover:bg-gray-50 transition-colors duration-300">
+            <div class="flex flex-col md:flex-row gap-8">
+                
+                <div class="md:w-1/4 flex-shrink-0">
+                    <h2 class="text-3xl font-light tracking-wide text-black">Why We Do.</h2>
+                </div>
+                
+                <div class="md:w-3/4">
+                    <p class="text-lg text-gray-700 leading-relaxed max-w-4xl">
+                        Fundamental research in this direction to develop novel algorithms for processing audio signals. Combining signal procesing and machine learning for real world applications.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 px-12 group hover:bg-gray-50 transition-colors duration-300">
+            <div class="flex flex-col md:flex-row gap-8">
+                
+                <div class="md:w-1/4 flex-shrink-0">
+                    <h2 class="text-3xl font-light tracking-wide text-black">Applications</h2>
+                </div>
+                
+                <div class="md:w-3/4 space-y-8">
+
+                    <div class="border-b border-gray-200 pb-4">
+                        <h3 class="text-xl font-normal tracking-wide mb-1">Large Language Models</h3>
+                    </div>
+			                    <div class="border-b border-gray-200 pb-4">
+                        <h3 class="text-xl font-normal tracking-wide mb-1">Multimodal emotion recognition</h3>
+                    </div>
+
+                    <div class="border-b border-gray-200 pb-4">
+                        <h3 class="text-xl font-normal tracking-wide mb-1">Emotion understanding</h3>
+                    </div>
+
+                    <div class="border-b border-gray-200 pb-4">
+                        <h3 class="text-xl font-normal tracking-wide mb-1">AI for Healthcare</h3>
+                    </div>
+
+                    <div class="border-b border-gray-200 pb-4">
+                        <h3 class="text-xl font-normal tracking-wide mb-1">Representation learning</h3>
+                    </div>
+
+                    <div class="border-b border-gray-200 pb-4">
+                        <h3 class="text-xl font-normal tracking-wide mb-1">Robust speech recognition</h3>
+                    </div>
+
+
+                    <div class="border-b border-gray-200 pb-4">
+                        <h3 class="text-xl font-normal tracking-wide mb-1">End-to-end modeling</h3>
+                    </div>
+
+                    <div class="border-b border-gray-200 pb-4">
+                        <h3 class="text-xl font-normal tracking-wide mb-1">EEG analysis for decoding speech perception</h3>
+                    </div>
+
+		 <div class="border-b border-gray-200 pb-4">
+                        <h3 class="text-xl font-normal tracking-wide mb-1">Speech synthesis</h3>
+                    </div>                    
+                </div>
+            </div>
+        </section>
+
+    </main>       
+
+    </main>
+
+    <footer class="bg-white mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 text-center">
+            <p class="text-gray-500 text-sm">&copy; 2025 LEAP Lab. All rights reserved.</p>
+        </div>
+    </footer>
+<script src="../js/app.js"></script>
+</body>
+</html>
+
